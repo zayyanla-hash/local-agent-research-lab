@@ -294,7 +294,7 @@
       "lab_adaptation_license": "Apache-2.0",
       "final_package_inventory": {
         "path": "final-release/huggingface/weightforge/UPLOAD-SHA256SUMS",
-        "sha256": "b6f900384d6f59b25b10d6ea0b4c79407941e19dc458bdb859c3f8a5acc44508",
+        "sha256": "86e8d025d81c5115958cb86d954bc1384c624b4c4f6f749519cfc4027f1cba68",
         "bytes": 1318
       },
       "final_runtime_inventory": {

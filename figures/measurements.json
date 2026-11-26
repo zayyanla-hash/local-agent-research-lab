@@ -1,0 +1,1390 @@
+{
+  "schema_version": 1,
+  "archive": "WeightForge and MCP Guard Sentry staged research figures",
+  "renderer": "Matplotlib 3.10.8 and Matplotlib 3.11.2",
+  "figures": {
+    "agent-accuracy-latency-pareto": {
+      "files": [
+        {
+          "file": "agent-accuracy-latency-pareto.png",
+          "sha256": "839ad4c6e67ff2bb8cd58f9e2a91e1798a1f1fd1cd0041d56edbecb27f1ff937"
+        },
+        {
+          "file": "agent-accuracy-latency-pareto.svg",
+          "sha256": "0b957c6c48203d77ab68046ef3a9770413f749adcd221c95abd3ec92aafc423d"
+        }
+      ],
+      "archive_sources": [
+        {
+          "description": "AgentEfficiencyBench matched 12-case policy aggregate",
+          "sha256": "6e3c9c20a85e5d750fbf8968c2cd1e7b5c2e536f1cdaf66dd20efd7b7796581f"
+        }
+      ],
+      "measured_values": {
+        "4b": {
+          "exact": 10,
+          "attempts": 12,
+          "summed_episode_seconds": 11.272799001191743,
+          "generated_tokens": 418
+        },
+        "27b": {
+          "exact": 11,
+          "attempts": 12,
+          "summed_episode_seconds": 48.61509974801447,
+          "generated_tokens": 431
+        },
+        "existing_route": {
+          "exact": 10,
+          "attempts": 12,
+          "summed_episode_seconds": 10.353904210263863,
+          "generated_tokens": 383
+        },
+        "adaptive": {
+          "exact": 10,
+          "attempts": 12,
+          "summed_episode_seconds": 15.868483251077123,
+          "generated_tokens": 418
+        },
+        "code_mode": {
+          "exact": 12,
+          "attempts": 12,
+          "summed_episode_seconds": 1.6643977466737852,
+          "generated_tokens": 56
+        },
+        "optimized_skill": {
+          "exact": 10,
+          "attempts": 12,
+          "summed_episode_seconds": 12.170042664860375,
+          "generated_tokens": 455
+        },
+        "combined": {
+          "exact": 12,
+          "attempts": 12,
+          "summed_episode_seconds": 6.276700038695708,
+          "generated_tokens": 56
+        }
+      },
+      "renderer": "Matplotlib 3.10.8"
+    },
+    "same-source-quantization": {
+      "files": [
+        {
+          "file": "same-source-quantization.png",
+          "sha256": "d129110ce4516751d2cf84aa60c8e5423e0781467f7d9ab2e5f73450abe514e6"
+        },
+        {
+          "file": "same-source-quantization.svg",
+          "sha256": "3821875864b33ac247e952982a873d386850353cd0fd1f17bef9fb3fec52bdd2"
+        }
+      ],
+      "archive_sources": [
+        {
+          "description": "Qwen3.5-0.8B matched BF16, INT4 G64 and INT4 G32 aggregate",
+          "sha256": "a1e059d3e545f09fe72b04c4223fadb5acfe018a32fd29e1f959173a9aa6c25a"
+        }
+      ],
+      "measured_values": {
+        "bf16": {
+          "dev": {
+            "successes": 7,
+            "attempts": 12,
+            "median_generation_ms": 285.08483356563374,
+            "peak_mlx_bytes": 2640111448
+          },
+          "public_val": {
+            "successes": 6,
+            "attempts": 12,
+            "median_generation_ms": 269.6166255627759,
+            "peak_mlx_bytes": 2777230156
+          }
+        },
+        "int4_g64": {
+          "dev": {
+            "successes": 6,
+            "attempts": 12,
+            "median_generation_ms": 185.8348539681174,
+            "peak_mlx_bytes": 1758946700
+          },
+          "public_val": {
+            "successes": 6,
+            "attempts": 12,
+            "median_generation_ms": 189.76545799523592,
+            "peak_mlx_bytes": 1897736554
+          }
+        },
+        "int4_g32": {
+          "dev": {
+            "successes": 7,
+            "attempts": 12,
+            "median_generation_ms": 230.76914600096643,
+            "peak_mlx_bytes": 1802941836
+          },
+          "public_val": {
+            "successes": 8,
+            "attempts": 12,
+            "median_generation_ms": 220.27037502266467,
+            "peak_mlx_bytes": 1944729962
+          }
+        }
+      },
+      "renderer": "Matplotlib 3.10.8"
+    },
+    "resident-memory-throughput": {
+      "files": [
+        {
+          "file": "resident-memory-throughput.png",
+          "sha256": "cc1e9b34472474ac3efd29acc9c0af88ab2fa5aa09b5158abd1b952a90c999d4"
+        },
+        {
+          "file": "resident-memory-throughput.svg",
+          "sha256": "29a3967b0e80f27687aee405c822518eb4e0f491ca47d3a40cfa6319beebf33d"
+        }
+      ],
+      "archive_sources": [
+        {
+          "description": "Paired Qwen 4B and 27B resident exact-copy measurements",
+          "sha256": "7cdbefcbb1d731c2102542c0b8e5a2f41f86963527060f3670e6d19d17d4b07f"
+        }
+      ],
+      "measured_values": [
+        {
+          "model": "27b",
+          "context": 512,
+          "attempts": 1,
+          "successes": 1,
+          "peak_mlx_bytes": 16388723818,
+          "median_post_first_decode_tps": 17.675326006341148
+        },
+        {
+          "model": "27b",
+          "context": 2048,
+          "attempts": 1,
+          "successes": 1,
+          "peak_mlx_bytes": 18127461428,
+          "median_post_first_decode_tps": 17.473896499268378
+        },
+        {
+          "model": "27b",
+          "context": 4096,
+          "attempts": 1,
+          "successes": 1,
+          "peak_mlx_bytes": 18262129706,
+          "median_post_first_decode_tps": 17.24493222756543
+        },
+        {
+          "model": "4b",
+          "context": 512,
+          "attempts": 1,
+          "successes": 1,
+          "peak_mlx_bytes": 3378742996,
+          "median_post_first_decode_tps": 96.78289209615969
+        },
+        {
+          "model": "4b",
+          "context": 2048,
+          "attempts": 1,
+          "successes": 1,
+          "peak_mlx_bytes": 4148198984,
+          "median_post_first_decode_tps": 93.94253955721102
+        },
+        {
+          "model": "4b",
+          "context": 4096,
+          "attempts": 1,
+          "successes": 1,
+          "peak_mlx_bytes": 4215545398,
+          "median_post_first_decode_tps": 84.49382640504226
+        }
+      ],
+      "renderer": "Matplotlib 3.10.8"
+    },
+    "reciprocal-weight-localization": {
+      "files": [
+        {
+          "file": "reciprocal-weight-localization.png",
+          "sha256": "c9b2f72358a47321c23ab83f23d324eacae447fa8ffea228dedc8ce54e271bd4"
+        },
+        {
+          "file": "reciprocal-weight-localization.svg",
+          "sha256": "e881267828ef8f40e985b7eba7b069dff990949087bd5953ea289c6245bcb0c2"
+        }
+      ],
+      "archive_sources": [
+        {
+          "description": "Qwen3.5-0.8B reciprocal single-layer and component logit interventions",
+          "sha256": "141905d42422c5089dfbff9a87bd9d2785a714f053052cdf079ac2e20967b6a8"
+        }
+      ],
+      "measured_values": {
+        "G64_plus_BF16": {
+          "baseline": -0.375,
+          "single_layer_margins": [
+            -2.25,
+            1.375,
+            -0.75,
+            -0.25,
+            0.0,
+            -1.25,
+            -1.125,
+            -1.0,
+            -0.125,
+            0.125,
+            -0.375,
+            -0.5,
+            0.0,
+            0.375,
+            -1.125,
+            -1.25,
+            -0.375,
+            -0.625,
+            0.0,
+            -0.125,
+            -0.5,
+            -0.25,
+            -0.5,
+            -0.75
+          ]
+        },
+        "BF16_plus_G64": {
+          "baseline": 1.375,
+          "single_layer_margins": [
+            0.75,
+            1.75,
+            2.375,
+            2.125,
+            1.25,
+            2.625,
+            2.125,
+            0.25,
+            0.625,
+            1.375,
+            1.0,
+            1.375,
+            1.25,
+            1.625,
+            2.375,
+            1.375,
+            1.25,
+            1.125,
+            1.75,
+            1.125,
+            1.375,
+            1.125,
+            1.75,
+            2.0
+          ]
+        },
+        "selected_G64_plus_BF16_L1_attention": 1.25
+      },
+      "renderer": "Matplotlib 3.10.8"
+    },
+    "workflow-ablations": {
+      "files": [
+        {
+          "file": "workflow-ablations.png",
+          "sha256": "5134203c470a1fa11f127f01370289c811a2c322d1cd3d842aa2a6355c7a63ed"
+        },
+        {
+          "file": "workflow-ablations.svg",
+          "sha256": "aabbeea4189a064b9346e907cd42c02557766fac9c7f1256d89969412f71b4db"
+        }
+      ],
+      "archive_sources": [
+        {
+          "description": "Six public incident lookup variants across five arms",
+          "sha256": "be1ed6d6a3a456b30fc1a46797f1e50d867ad1ec80e9a8340ba558c9065503de"
+        },
+        {
+          "description": "Frozen 18-case compact-call paired aggregate",
+          "sha256": "dcbf781d7b9ef033b8fd925f2c4d5daba7f4a74f08322ee208a6ef9a527e7fd4"
+        }
+      ],
+      "measured_values": {
+        "incident": {
+          "none": [
+            3,
+            6
+          ],
+          "generic_skill": [
+            5,
+            6
+          ],
+          "qwen_skill": [
+            4,
+            6
+          ],
+          "code_mode": [
+            6,
+            6
+          ],
+          "skill_plus_code": [
+            6,
+            6
+          ]
+        },
+        "compact": {
+          "matched": [
+            11,
+            18
+          ],
+          "boundary": [
+            9,
+            18
+          ],
+          "mixed": [
+            12,
+            18
+          ],
+          "mixed-boundary": [
+            9,
+            18
+          ]
+        }
+      },
+      "renderer": "Matplotlib 3.10.8"
+    },
+    "sentry-advisory-precision-recall": {
+      "files": [
+        {
+          "file": "sentry-advisory-precision-recall.png",
+          "sha256": "b2e838b7c5fb55adea61479df7ba9f38fe8f1451f9fdffb0a4dcefaffa623da4"
+        },
+        {
+          "file": "sentry-advisory-precision-recall.svg",
+          "sha256": "22dac67ab791562ccaa07ea63ca93d814f6747836ff4104e31f162159b491aef"
+        }
+      ],
+      "archive_sources": [
+        {
+          "description": "Held-public synthetic authorization score archive; 20 positive and 20 negative",
+          "sha256": "822374c7d01de43b77c8ab839cb8e564240127fd5cab3708390599cbec787b89"
+        }
+      ],
+      "measured_values": {
+        "lexical": {
+          "threshold_points_recall_precision": [
+            [
+              0,
+              1
+            ],
+            [
+              0.05,
+              1.0
+            ],
+            [
+              0.1,
+              1.0
+            ],
+            [
+              0.15,
+              1.0
+            ],
+            [
+              0.2,
+              1.0
+            ],
+            [
+              0.35,
+              0.7
+            ],
+            [
+              0.5,
+              0.7142857142857143
+            ],
+            [
+              0.55,
+              0.6111111111111112
+            ],
+            [
+              0.7,
+              0.6363636363636364
+            ],
+            [
+              0.75,
+              0.6521739130434783
+            ],
+            [
+              0.8,
+              0.64
+            ],
+            [
+              0.8,
+              0.6153846153846154
+            ],
+            [
+              0.85,
+              0.6071428571428571
+            ],
+            [
+              0.9,
+              0.5625
+            ],
+            [
+              0.95,
+              0.5757575757575758
+            ],
+            [
+              0.95,
+              0.5588235294117647
+            ],
+            [
+              0.95,
+              0.5135135135135135
+            ],
+            [
+              1.0,
+              0.5263157894736842
+            ],
+            [
+              1.0,
+              0.5128205128205128
+            ],
+            [
+              1.0,
+              0.5
+            ]
+          ],
+          "tie_grouped_average_precision": 0.7163474649238379
+        },
+        "minilm": {
+          "threshold_points_recall_precision": [
+            [
+              0,
+              1
+            ],
+            [
+              0.05,
+              1.0
+            ],
+            [
+              0.1,
+              1.0
+            ],
+            [
+              0.15,
+              1.0
+            ],
+            [
+              0.2,
+              1.0
+            ],
+            [
+              0.25,
+              1.0
+            ],
+            [
+              0.3,
+              1.0
+            ],
+            [
+              0.3,
+              0.8571428571428571
+            ],
+            [
+              0.35,
+              0.875
+            ],
+            [
+              0.35,
+              0.7777777777777778
+            ],
+            [
+              0.4,
+              0.8
+            ],
+            [
+              0.45,
+              0.8181818181818182
+            ],
+            [
+              0.5,
+              0.8333333333333334
+            ],
+            [
+              0.55,
+              0.8461538461538461
+            ],
+            [
+              0.55,
+              0.7857142857142857
+            ],
+            [
+              0.55,
+              0.7333333333333333
+            ],
+            [
+              0.6,
+              0.75
+            ],
+            [
+              0.65,
+              0.7647058823529411
+            ],
+            [
+              0.7,
+              0.7777777777777778
+            ],
+            [
+              0.7,
+              0.7368421052631579
+            ],
+            [
+              0.75,
+              0.75
+            ],
+            [
+              0.75,
+              0.7142857142857143
+            ],
+            [
+              0.75,
+              0.6818181818181818
+            ],
+            [
+              0.8,
+              0.6956521739130435
+            ],
+            [
+              0.8,
+              0.6666666666666666
+            ],
+            [
+              0.8,
+              0.64
+            ],
+            [
+              0.85,
+              0.6538461538461539
+            ],
+            [
+              0.85,
+              0.6296296296296297
+            ],
+            [
+              0.9,
+              0.6428571428571429
+            ],
+            [
+              0.95,
+              0.6551724137931034
+            ],
+            [
+              0.95,
+              0.6333333333333333
+            ],
+            [
+              0.95,
+              0.6129032258064516
+            ],
+            [
+              0.95,
+              0.59375
+            ],
+            [
+              0.95,
+              0.5757575757575758
+            ],
+            [
+              1.0,
+              0.5882352941176471
+            ],
+            [
+              1.0,
+              0.5714285714285714
+            ],
+            [
+              1.0,
+              0.5555555555555556
+            ],
+            [
+              1.0,
+              0.5405405405405406
+            ],
+            [
+              1.0,
+              0.5263157894736842
+            ],
+            [
+              1.0,
+              0.5128205128205128
+            ],
+            [
+              1.0,
+              0.5
+            ]
+          ],
+          "tie_grouped_average_precision": 0.8225457918163404
+        }
+      },
+      "renderer": "Matplotlib 3.10.8"
+    },
+    "grounding-and-coverage": {
+      "files": [
+        {
+          "file": "grounding-and-coverage.png",
+          "sha256": "9066d8cb89bb9cd78430f264fd293dbab4560f414ce4c18ee96d21a5fd9d6495"
+        },
+        {
+          "file": "grounding-and-coverage.svg",
+          "sha256": "7966ef56ba8b87237f659d9855db17836f0220908ca99eac25d934dfb164dd27"
+        }
+      ],
+      "archive_sources": [
+        {
+          "description": "Doc2Dial TRAIN candidate-span rank aggregate",
+          "sha256": "aea83a85336b2acc9b7d6e2e6a75ea710ee9e6f7061e7dd0d2a5963fb8519073"
+        },
+        {
+          "description": "Granite and NLI matched fixed-block intent aggregate",
+          "sha256": "2c712e13cfe6e7fe4140e669113c47569f4a15f130b7a8b630bb88166ec73954"
+        }
+      ],
+      "measured_values": {
+        "span_selection": {
+          "four_hard_competitors": {
+            "char_tfidf": 12,
+            "minilm_cosine": 15,
+            "trained_pairwise_overlay": 8
+          },
+          "all_screened_same_document_spans": {
+            "char_tfidf": 12,
+            "minilm_cosine": 13,
+            "trained_pairwise_overlay": 11
+          }
+        },
+        "coverage": {
+          "literal-only": {
+            "rows": 96,
+            "match_cases": 42,
+            "mismatch_cases": 42,
+            "ambiguity_cases": 12,
+            "true_matches_autoaccepted": 12,
+            "mismatches_autoaccepted": 0,
+            "ambiguities_autoaccepted": 0,
+            "escalated": 84
+          },
+          "fallback-native-guardian": {
+            "rows": 96,
+            "match_cases": 42,
+            "mismatch_cases": 42,
+            "ambiguity_cases": 12,
+            "true_matches_autoaccepted": 20,
+            "mismatches_autoaccepted": 0,
+            "ambiguities_autoaccepted": 0,
+            "escalated": 76
+          },
+          "fallback-guardian-readout": {
+            "rows": 96,
+            "match_cases": 42,
+            "mismatch_cases": 42,
+            "ambiguity_cases": 12,
+            "true_matches_autoaccepted": 20,
+            "mismatches_autoaccepted": 0,
+            "ambiguities_autoaccepted": 0,
+            "escalated": 76
+          },
+          "fallback-nli": {
+            "rows": 96,
+            "match_cases": 42,
+            "mismatch_cases": 42,
+            "ambiguity_cases": 12,
+            "true_matches_autoaccepted": 26,
+            "mismatches_autoaccepted": 0,
+            "ambiguities_autoaccepted": 0,
+            "escalated": 70
+          }
+        }
+      },
+      "renderer": "Matplotlib 3.10.8"
+    },
+    "qv-orientation-ablation": {
+      "files": [
+        {
+          "file": "qv-orientation-ablation.png",
+          "sha256": "90c0a73a35e2a0b32ff9ab7c45c3f5dde7cf2a1d8be180211082836fc24fdd43"
+        },
+        {
+          "file": "qv-orientation-ablation.svg",
+          "sha256": "45b292cf7388f7cdb2bfaff728070cf17de4ba3e9f9c6fe22359634b9df459f2"
+        }
+      ],
+      "archive_sources": [
+        {
+          "description": "Frozen Q/V orientation control and exact-rollback score archive",
+          "sha256": "b57427b86a44093847653e7eea50381d29ca8021eaf37538bcdd7a8a47d08bf0"
+        }
+      ],
+      "measured_values": [
+        {
+          "arm": "intact",
+          "candidate_top": 10,
+          "median_margin": 1.3125
+        },
+        {
+          "arm": 111,
+          "candidate_top": 0,
+          "median_margin": -1.5
+        },
+        {
+          "arm": 112,
+          "candidate_top": 1,
+          "median_margin": -1.8125
+        },
+        {
+          "arm": 113,
+          "candidate_top": 1,
+          "median_margin": -1.5625
+        },
+        {
+          "arm": 114,
+          "candidate_top": 0,
+          "median_margin": -1.4375
+        },
+        {
+          "arm": 115,
+          "candidate_top": 0,
+          "median_margin": -1.5625
+        },
+        {
+          "arm": 116,
+          "candidate_top": 2,
+          "median_margin": -1.5625
+        },
+        {
+          "arm": 117,
+          "candidate_top": 0,
+          "median_margin": -1.625
+        },
+        {
+          "arm": 118,
+          "candidate_top": 1,
+          "median_margin": -1.4375
+        }
+      ],
+      "renderer": "Matplotlib 3.10.8"
+    },
+    "sentry-confidence-coverage": {
+      "files": [
+        {
+          "file": "sentry-confidence-coverage.png",
+          "sha256": "26185665db44c9aec651fe4842749ee9536294f008fdd1ad3684655b0f7c2712"
+        },
+        {
+          "file": "sentry-confidence-coverage.svg",
+          "sha256": "287f2350ae1696a2cd5e3c6e18ede85ca9a27db2a808495179af9c8b185bafee"
+        }
+      ],
+      "archive_sources": [
+        {
+          "description": "Advisory top-label threshold replay on 232 fixed development inputs",
+          "sha256": "691e5569b10c9d82aebbef712904da443d71c07ba1931be202d37ab1f31f8682"
+        }
+      ],
+      "measured_values": {
+        "parent-fewshot": [
+          {
+            "min_score": 0.5,
+            "decided": 230,
+            "correct": 133,
+            "coverage": 0.9913793103448276,
+            "error_rate": 0.4217391304347826
+          },
+          {
+            "min_score": 0.7,
+            "decided": 211,
+            "correct": 129,
+            "coverage": 0.9094827586206896,
+            "error_rate": 0.3886255924170616
+          },
+          {
+            "min_score": 0.8,
+            "decided": 203,
+            "correct": 128,
+            "coverage": 0.875,
+            "error_rate": 0.3694581280788177
+          },
+          {
+            "min_score": 0.9,
+            "decided": 185,
+            "correct": 125,
+            "coverage": 0.7974137931034483,
+            "error_rate": 0.32432432432432434
+          },
+          {
+            "min_score": 0.95,
+            "decided": 176,
+            "correct": 122,
+            "coverage": 0.7586206896551724,
+            "error_rate": 0.30681818181818177
+          },
+          {
+            "min_score": 0.99,
+            "decided": 155,
+            "correct": 113,
+            "coverage": 0.6681034482758621,
+            "error_rate": 0.2709677419354839
+          }
+        ],
+        "rank4-fewshot": [
+          {
+            "min_score": 0.5,
+            "decided": 200,
+            "correct": 136,
+            "coverage": 0.8620689655172413,
+            "error_rate": 0.31999999999999995
+          },
+          {
+            "min_score": 0.7,
+            "decided": 105,
+            "correct": 68,
+            "coverage": 0.4525862068965517,
+            "error_rate": 0.35238095238095235
+          },
+          {
+            "min_score": 0.8,
+            "decided": 64,
+            "correct": 44,
+            "coverage": 0.27586206896551724,
+            "error_rate": 0.3125
+          },
+          {
+            "min_score": 0.9,
+            "decided": 16,
+            "correct": 14,
+            "coverage": 0.06896551724137931,
+            "error_rate": 0.125
+          },
+          {
+            "min_score": 0.95,
+            "decided": 0,
+            "correct": 0,
+            "coverage": 0.0,
+            "error_rate": null
+          },
+          {
+            "min_score": 0.99,
+            "decided": 0,
+            "correct": 0,
+            "coverage": 0.0,
+            "error_rate": null
+          }
+        ],
+        "rank16-fewshot": [
+          {
+            "min_score": 0.5,
+            "decided": 80,
+            "correct": 44,
+            "coverage": 0.3448275862068966,
+            "error_rate": 0.44999999999999996
+          },
+          {
+            "min_score": 0.7,
+            "decided": 0,
+            "correct": 0,
+            "coverage": 0.0,
+            "error_rate": null
+          },
+          {
+            "min_score": 0.8,
+            "decided": 0,
+            "correct": 0,
+            "coverage": 0.0,
+            "error_rate": null
+          },
+          {
+            "min_score": 0.9,
+            "decided": 0,
+            "correct": 0,
+            "coverage": 0.0,
+            "error_rate": null
+          },
+          {
+            "min_score": 0.95,
+            "decided": 0,
+            "correct": 0,
+            "coverage": 0.0,
+            "error_rate": null
+          },
+          {
+            "min_score": 0.99,
+            "decided": 0,
+            "correct": 0,
+            "coverage": 0.0,
+            "error_rate": null
+          }
+        ],
+        "pretrained-nli": [
+          {
+            "min_score": 0.5,
+            "decided": 228,
+            "correct": 36,
+            "coverage": 0.9827586206896551,
+            "error_rate": 0.8421052631578947
+          },
+          {
+            "min_score": 0.7,
+            "decided": 206,
+            "correct": 33,
+            "coverage": 0.8879310344827587,
+            "error_rate": 0.8398058252427184
+          },
+          {
+            "min_score": 0.8,
+            "decided": 189,
+            "correct": 32,
+            "coverage": 0.8146551724137931,
+            "error_rate": 0.8306878306878307
+          },
+          {
+            "min_score": 0.9,
+            "decided": 147,
+            "correct": 28,
+            "coverage": 0.6336206896551724,
+            "error_rate": 0.8095238095238095
+          },
+          {
+            "min_score": 0.95,
+            "decided": 98,
+            "correct": 23,
+            "coverage": 0.4224137931034483,
+            "error_rate": 0.7653061224489796
+          },
+          {
+            "min_score": 0.99,
+            "decided": 12,
+            "correct": 7,
+            "coverage": 0.05172413793103448,
+            "error_rate": 0.41666666666666663
+          }
+        ]
+      },
+      "renderer": "Matplotlib 3.10.8"
+    },
+    "official-precision-memory-throughput": {
+      "files": [
+        {
+          "file": "official-precision-memory-throughput.png",
+          "sha256": "051a1168537e98c18085e650d9ec3a6c1c18625f385a8012c7629a2e5197c095"
+        },
+        {
+          "file": "official-precision-memory-throughput.svg",
+          "sha256": "e67c699a5d3d5b3b3475461aebbc75e96809715d86af6d6cad9f6d113c6460ab"
+        }
+      ],
+      "archive_sources": [
+        {
+          "description": "Complete portable 72-row MLX-LM official timing trial archive",
+          "sha256": "646667f40131104653e7deea1bb280ffc62de6b352cd41cc9a4b7b062df86fa7"
+        }
+      ],
+      "measured_values": {
+        "wf_adapted_bf16": {
+          "trials": 3,
+          "max_mlx_decimal_gb": 10.04,
+          "median_generation_tokens_per_second": 31.878
+        },
+        "wf_adapted_int8": {
+          "trials": 3,
+          "max_mlx_decimal_gb": 6.155,
+          "median_generation_tokens_per_second": 56.098
+        },
+        "wf_deploy_int4": {
+          "trials": 3,
+          "max_mlx_decimal_gb": 4.149,
+          "median_generation_tokens_per_second": 97.337
+        },
+        "wf_parent_int4": {
+          "trials": 3,
+          "max_mlx_decimal_gb": 4.149,
+          "median_generation_tokens_per_second": 97.387
+        },
+        "sentry_adapted_bf16": {
+          "trials": 3,
+          "max_mlx_decimal_gb": 2.136,
+          "median_generation_tokens_per_second": 169.75
+        },
+        "sentry_adapted_int8": {
+          "trials": 3,
+          "max_mlx_decimal_gb": 1.75,
+          "median_generation_tokens_per_second": 250.837
+        },
+        "sentry_deploy_int4": {
+          "trials": 3,
+          "max_mlx_decimal_gb": 1.46,
+          "median_generation_tokens_per_second": 322.058
+        },
+        "sentry_parent_int4": {
+          "trials": 3,
+          "max_mlx_decimal_gb": 1.46,
+          "median_generation_tokens_per_second": 323.59
+        }
+      },
+      "renderer": "Matplotlib 3.10.8"
+    },
+    "public-benign-guard-alerts": {
+      "files": [
+        {
+          "file": "public-benign-guard-alerts.png",
+          "sha256": "ecb0a175c2501a46afce03fbc2f1611e2c41a9f666bf275eed2e27b319c94c0d"
+        },
+        {
+          "file": "public-benign-guard-alerts.svg",
+          "sha256": "018ae53fc46233594fd19f939adb006e9bcc70be6a2999680d8c2ae1b5a39855"
+        }
+      ],
+      "archive_sources": [
+        {
+          "description": "Qwen on 50 safe XSTest records",
+          "sha256": "88a836b2180d253e6e79f07d825e569b3325a0af63e2224ebdedafbf1b0c3ea4"
+        },
+        {
+          "description": "Granite on the same XSTest records",
+          "sha256": "62a658cbdf531517ca72a796aacf76a8d10e3746eb63e6cfceb1f8554171648f"
+        },
+        {
+          "description": "Qwen on 15 selected safe OR-Bench records",
+          "sha256": "e60c2d2e5c9ae017ab40567bdebb533acb761adf917bbe7961e192b1c982d8f6"
+        },
+        {
+          "description": "Granite on the same OR-Bench records",
+          "sha256": "4514833ecb0b3883fbd180fd697ff164e529c45ca15de5a57cf186925965c0de"
+        },
+        {
+          "description": "PIGuard on all 339 benign NotInject records",
+          "sha256": "906aef0c21c0bdf84ebbb1a795720ccbe11560675c181455ce636dbb23874421"
+        }
+      ],
+      "measured_values": {
+        "harm_guard_channels": [
+          "Qwen Unsafe",
+          "Qwen Unsafe or Controversial",
+          "Granite harm Yes"
+        ],
+        "paired_corpora": [
+          [
+            "XSTest safe slice",
+            50,
+            [
+              5,
+              17,
+              20
+            ]
+          ],
+          [
+            "OR-Bench safe slice",
+            15,
+            [
+              7,
+              9,
+              9
+            ]
+          ]
+        ],
+        "piguard_notinject": [
+          39,
+          339
+        ]
+      },
+      "renderer": "Matplotlib 3.10.8"
+    },
+    "public-weightforge": {
+      "files": [
+        {
+          "file": "public-weightforge.png",
+          "sha256": "cc4a433d06597bca53918e704bc9fdcc7429ff6dcceee805b8bc1be0decc6584"
+        },
+        {
+          "file": "public-weightforge.svg",
+          "sha256": "17894b4f2dcaa38c297153ea3e1e9e52b32493101d3be2431a19d57c34a0d01c"
+        }
+      ],
+      "archive_sources": [
+        {
+          "description": "Four complete paired BFCL v4 static Python categories",
+          "sha256": "8dc2ea9efad05eda326d5bf76ceda98ee233b56cf72c84dd237a98d52c474126"
+        },
+        {
+          "description": "HumanEval and HumanEval+ exact replay and reference validation",
+          "sha256": "c97155ae03617094f8d1c9525ec25028b3f31e025ff8e0a2c0c3ceebad1af43b"
+        }
+      ],
+      "measured_values": [
+        {
+          "label": "BFCL Simple Python",
+          "before": [
+            343,
+            400
+          ],
+          "after": [
+            362,
+            400
+          ],
+          "paired_pp": [
+            4.75,
+            2.25,
+            7.5
+          ]
+        },
+        {
+          "label": "BFCL Multiple",
+          "before": [
+            185,
+            200
+          ],
+          "after": [
+            187,
+            200
+          ],
+          "paired_pp": [
+            1.0,
+            -1.0,
+            3.0
+          ]
+        },
+        {
+          "label": "BFCL Parallel",
+          "before": [
+            84,
+            200
+          ],
+          "after": [
+            124,
+            200
+          ],
+          "paired_pp": [
+            20.0,
+            14.499999999999998,
+            26.0
+          ]
+        },
+        {
+          "label": "BFCL Parallel Multiple",
+          "before": [
+            87,
+            200
+          ],
+          "after": [
+            120,
+            200
+          ],
+          "paired_pp": [
+            16.5,
+            11.5,
+            22.0
+          ]
+        },
+        {
+          "label": "HumanEval base",
+          "before": [
+            118,
+            164
+          ],
+          "after": [
+            120,
+            164
+          ],
+          "paired_pp": [
+            1.2195121951219512,
+            -1.2195121951219512,
+            3.6585365853658534
+          ]
+        },
+        {
+          "label": "HumanEval+ augmented",
+          "before": [
+            113,
+            164
+          ],
+          "after": [
+            118,
+            164
+          ],
+          "paired_pp": [
+            3.048780487804878,
+            0.6097560975609756,
+            6.097560975609756
+          ]
+        }
+      ],
+      "renderer": "Matplotlib 3.11.2"
+    },
+    "public-sentry": {
+      "files": [
+        {
+          "file": "public-sentry.png",
+          "sha256": "582fe97eb8496a7490eb21252bbc353583234602442b60df50728dccf49f3318"
+        },
+        {
+          "file": "public-sentry.svg",
+          "sha256": "784be23029c5d98bd35bf1c1fe1fd45381d7eaab0b3d2cbc9faae1c905279593"
+        }
+      ],
+      "archive_sources": [
+        {
+          "description": "Full NotInject matched INT4 parent trace manifest",
+          "sha256": "f77efcd685a1e1f4f482465b522d820e3b8f2353bb0552a4586ecba7a4ce32c6"
+        },
+        {
+          "description": "Full NotInject adapted INT4 trace manifest",
+          "sha256": "8df8873491fc81e730b2abee609a98da56a3401566329380818dbf7d326e2539"
+        }
+      ],
+      "measured_values": [
+        {
+          "label": "All benign prompts",
+          "before": [
+            91,
+            339
+          ],
+          "after": [
+            32,
+            339
+          ],
+          "paired_pp": [
+            -17.404129793510325,
+            -22.418879056047196,
+            -12.094395280235988
+          ]
+        },
+        {
+          "label": "One trigger",
+          "before": [
+            30,
+            113
+          ],
+          "after": [
+            8,
+            113
+          ],
+          "paired_pp": [
+            -19.469026548672566,
+            -27.43362831858407,
+            -11.504424778761061
+          ]
+        },
+        {
+          "label": "Two triggers",
+          "before": [
+            24,
+            113
+          ],
+          "after": [
+            5,
+            113
+          ],
+          "paired_pp": [
+            -16.8141592920354,
+            -24.778761061946902,
+            -8.849557522123893
+          ]
+        },
+        {
+          "label": "Three triggers",
+          "before": [
+            37,
+            113
+          ],
+          "after": [
+            19,
+            113
+          ],
+          "paired_pp": [
+            -15.929203539823009,
+            -26.548672566371685,
+            -5.3097345132743365
+          ]
+        }
+      ],
+      "renderer": "Matplotlib 3.11.2"
+    },
+    "sentry-operating-points": {
+      "files": [
+        {
+          "file": "sentry-operating-points.png",
+          "sha256": "a2679b34891fa1767393ed73d769230c459f94fb651496e4dcfec1754212fb40"
+        },
+        {
+          "file": "sentry-operating-points.svg",
+          "sha256": "5e5c2c62e2be9c7ca7b21ac91034cb7b80dbc2753883bc55b04c6089ff486346"
+        }
+      ],
+      "archive_sources": [
+        {
+          "description": "Sanitized independent synthetic post-hoc ranking aggregate",
+          "sha256": "5b8ef7e1eef2fe5b5d515f985906528af81863007dde9fed2087888e97a56273"
+        }
+      ],
+      "measured_values": {
+        "scope": "post-hoc threshold-independent ranking and cross-application of frozen score thresholds",
+        "suspicious": 12,
+        "benign": 18,
+        "uncertain_excluded": 6,
+        "families": 18,
+        "bootstrap": "10,000 draws, NumPy default_rng seed 17, independently sample 12 paired families and six benign-only families with replacement within strata, sharing sampled indices across arms, percentile 95% intervals",
+        "arms": {
+          "base-int4": {
+            "auc": 0.4027777777777778,
+            "auc_95": [
+              0.24074074074074073,
+              0.5787037037037037
+            ],
+            "wins_of_216": 87,
+            "ties_of_216": 0,
+            "within_same_proposal_strict_wins_of_12": 6,
+            "within_same_proposal_ties_of_12": 0,
+            "thresholds": {
+              "base-int4": {
+                "cutoff": 0.0012789634056389332,
+                "detected": 12,
+                "benign_alerts": 17
+              },
+              "deploy-int4": {
+                "cutoff": 0.9014432430267334,
+                "detected": 0,
+                "benign_alerts": 0
+              }
+            }
+          },
+          "deploy-int4": {
+            "auc": 0.6712962962962963,
+            "auc_95": [
+              0.5,
+              0.8518518518518519
+            ],
+            "wins_of_216": 145,
+            "ties_of_216": 0,
+            "within_same_proposal_strict_wins_of_12": 9,
+            "within_same_proposal_ties_of_12": 0,
+            "thresholds": {
+              "base-int4": {
+                "cutoff": 0.0012789634056389332,
+                "detected": 12,
+                "benign_alerts": 18
+              },
+              "deploy-int4": {
+                "cutoff": 0.9014432430267334,
+                "detected": 2,
+                "benign_alerts": 3
+              }
+            }
+          }
+        },
+        "paired_auc_difference": {
+          "deploy_minus_base": 0.2685185185185185,
+          "interval_95": [
+            0.00462962962962965,
+            0.5185185185185186
+          ]
+        }
+      },
+      "renderer": "Matplotlib 3.11.2"
+    }
+  },
+  "credit": {
+    "creator": "Zayyan Latif",
+    "copyright": "© 2026 Zayyan Latif",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "scope": "Original figure artwork in this directory"
+  }
+}

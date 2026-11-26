@@ -1,0 +1,1898 @@
+{
+  "schema_version": 1,
+  "scope": "Two frozen research model packages and their experiment evidence. Artifact roles identify the final package targets; paths point to original lab records unless named portable.",
+  "outbound_rights": {
+    "rights_holder": "Zayyan Latif",
+    "original_model_adaptations_and_source_code": "Apache-2.0",
+    "original_research_papers_figures_and_eligible_synthetic_datasets": "CC-BY-4.0",
+    "third_party_material": "Retains its original terms and attribution.",
+    "approval_scope": "Owner approved publication of the scoped GitHub and Hugging Face inventories at the recorded destinations.",
+    "approved_destinations": {
+      "github": "zayyanla-hash/local-agent-research-lab",
+      "weightforge_huggingface": "zayyanxlatif/WeightForge-4B-Tools-INT4",
+      "sentry_huggingface": "zayyanxlatif/Sentry-1.7B-Intent-Advisory-LoRA"
+    },
+    "publication_authorized": true,
+    "delivery_status_scope": "This registry records local package bytes and authorized destinations. The release transfer workflow tracks remote delivery."
+  },
+  "field_conventions": {
+    "sha256": "Lowercase hexadecimal SHA-256 of exact file bytes.",
+    "local_paths": "All lab-source paths are relative to the lab checkout root. Some datasets, weights, traces, and regenerator dependencies remain local. The public evidence bundle carries aggregates and hashes.",
+    "weights": "Tensor byte sizes exclude tokenizer files, configuration, and archive overhead.",
+    "memory": "MLX allocator bytes, process RSS, and host unified memory capacity are separate observations."
+  },
+  "artifacts": {
+    "weightforge-4b-tools-v0.1-step12-int4": {
+      "display_name": "WeightForge-4B-Tools-v0.1",
+      "role": "final_research_package_target",
+      "format": "standalone MLX text/tool checkpoint, BF16 fusion converted to affine INT4 group 64",
+      "upstream": {
+        "repository": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "license": "Apache-2.0",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-4B/tree/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "files": {
+          "config.json": {
+            "bytes": 3161,
+            "sha256": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670",
+            "upstream_object": "557d961b205319c6a7da5f757f565b69b3967b7d",
+            "object_type": "git_blob_sha1"
+          },
+          "chat_template.jinja": {
+            "bytes": 7756,
+            "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+            "upstream_object": "a585dec894e63da457d9440ec6aa7caa16d20860",
+            "object_type": "git_blob_sha1"
+          },
+          "LICENSE": {
+            "bytes": 11544,
+            "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+            "upstream_object": "f938136e3adacfd92be087f6e113b5d6d97f678f",
+            "object_type": "git_blob_sha1"
+          },
+          "tokenizer_config.json": {
+            "bytes": 16710,
+            "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+            "upstream_object": "eda48d3e75a8e59a8479ee4ec8b37f76e711d9c1",
+            "object_type": "git_blob_sha1"
+          },
+          "model.safetensors.index.json": {
+            "bytes": 76196,
+            "sha256": "cf3f798ee02ba45f9622aa8892a47369ab667d0afbf154ee7c2212de42e6302d",
+            "upstream_object": "fddda6039f7c1d17260c9e923b8a72fd025d9a86",
+            "object_type": "git_blob_sha1"
+          },
+          "README.md": {
+            "bytes": 77661,
+            "sha256": "1406be1b6b8fd8a6545870da516912804756593628a1d0fb0a7965211e82a7bb",
+            "upstream_object": "7950a3aadf378cd13758097bc52f0ed849a59007",
+            "object_type": "git_blob_sha1"
+          },
+          "merges.txt": {
+            "bytes": 3353259,
+            "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+            "upstream_object": "a494e019ca1502219fd0128658b979e5f05ae8e8",
+            "object_type": "git_blob_sha1"
+          },
+          "vocab.json": {
+            "bytes": 6722759,
+            "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+            "upstream_object": "0aa0ce0658d60ac4a5d609f4eadb0e8e43514176",
+            "object_type": "git_blob_sha1"
+          },
+          "tokenizer.json": {
+            "bytes": 12807982,
+            "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+            "upstream_object": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+            "object_type": "lfs_sha256"
+          },
+          "model.safetensors-00002-of-00002.safetensors": {
+            "bytes": 3990429408,
+            "sha256": "cb544bd9bfae93dc59b0f22b292f5933573854a7f9b97835c67060d7d910e188",
+            "upstream_object": "cb544bd9bfae93dc59b0f22b292f5933573854a7f9b97835c67060d7d910e188",
+            "object_type": "lfs_sha256"
+          },
+          "model.safetensors-00001-of-00002.safetensors": {
+            "bytes": 5329398688,
+            "sha256": "26a93f066e1916adb13453dae5a0c707c0fbc71299ed98779571a907b8e74c61",
+            "upstream_object": "26a93f066e1916adb13453dae5a0c707c0fbc71299ed98779571a907b8e74c61",
+            "object_type": "lfs_sha256"
+          }
+        }
+      },
+      "parent": "qwen3.5-4b-matched-affine-int4-parent",
+      "local_package": "final-release/huggingface/weightforge",
+      "staged_model_files": {
+        "LICENSE": {
+          "bytes": 11544,
+          "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
+        },
+        "chat_template.jinja": {
+          "bytes": 7756,
+          "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+        },
+        "config.json": {
+          "bytes": 2878,
+          "sha256": "8591d683d8d132234766399897415b9427967c05e77c1c169a40de3e81177e62"
+        },
+        "model.safetensors": {
+          "bytes": 2367238661,
+          "sha256": "69ac38a5e194765e3d489be1a1ac0e4a95a31201c83c1e256153a7180115ed73"
+        },
+        "model.safetensors.index.json": {
+          "bytes": 81008,
+          "sha256": "2e97890b24a47b9c290489efeb2b68b7e4dd4101360de80122165ebae4e0d6cf"
+        },
+        "tokenizer.json": {
+          "bytes": 19989325,
+          "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+        },
+        "tokenizer_config.json": {
+          "bytes": 1160,
+          "sha256": "386ba246ba3dfa4d3a21d8bc8712eba38de558e5ac94c2c90436d8f94d519d5e"
+        }
+      },
+      "original_frozen_artifacts": {
+        "adapter": {
+          "adapter_config.json": {
+            "sha256": "577485bab8195637a710e67aadc3b698c3677cf11e83f8a1af01a9bbdd143788",
+            "bytes": 1601
+          },
+          "adapters.safetensors": {
+            "sha256": "5aad4b81ff36f5f1278adf342501a2ce6e6b656846737735e48b52efc7e7378d",
+            "bytes": 2262439
+          },
+          "complete": {
+            "sha256": "81f6203cf10c5105a9cfcaa8886c1e8f3a4ef5417fdcff7f8e223bac97fd629c",
+            "bytes": 33
+          },
+          "initial.safetensors": {
+            "sha256": "710a57bb1e880bbf6d896049c1c67b9514c8da8accabe90b8971e444da3a05ad",
+            "bytes": 2262439
+          }
+        },
+        "merged-bf16": {
+          "LICENSE": {
+            "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+            "bytes": 11544
+          },
+          "README.md": {
+            "sha256": "748c964f9b7e5f2c3770ce013bbc0153be7c54311d9692c343b6188eefe77ac6",
+            "bytes": 81
+          },
+          "chat_template.jinja": {
+            "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+            "bytes": 7756
+          },
+          "config.json": {
+            "sha256": "77025ed0b68732aea52fd24d5e537e3838838cac8fe4e920735266c6f7c4e454",
+            "bytes": 2673
+          },
+          "model-00001-of-00002.safetensors": {
+            "sha256": "7b394281d55b920d495aa62a2607947116a3fb4e2bf81565279c6ea0d5822f39",
+            "bytes": 5356488660
+          },
+          "model-00002-of-00002.safetensors": {
+            "sha256": "e64584b67d60eac92b014d4532d0328e4e5e4fe1789c4359fc15a9a312798b1b",
+            "bytes": 3055077131
+          },
+          "model.safetensors.index.json": {
+            "sha256": "4964f3c49c0af77b03822430efbf4b6a5d772dc2f696f9d65b2802638baf49f4",
+            "bytes": 43712
+          },
+          "tokenizer.json": {
+            "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+            "bytes": 19989325
+          },
+          "tokenizer_config.json": {
+            "sha256": "386ba246ba3dfa4d3a21d8bc8712eba38de558e5ac94c2c90436d8f94d519d5e",
+            "bytes": 1160
+          }
+        },
+        "base-int4": {
+          "LICENSE": {
+            "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+            "bytes": 11544
+          },
+          "README.md": {
+            "sha256": "748c964f9b7e5f2c3770ce013bbc0153be7c54311d9692c343b6188eefe77ac6",
+            "bytes": 81
+          },
+          "chat_template.jinja": {
+            "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+            "bytes": 7756
+          },
+          "config.json": {
+            "sha256": "8591d683d8d132234766399897415b9427967c05e77c1c169a40de3e81177e62",
+            "bytes": 2878
+          },
+          "model.safetensors": {
+            "sha256": "d58b87def677c7b3235e21cdca85289a162a5ba8949687b9573592e3c74cd477",
+            "bytes": 2367238661
+          },
+          "model.safetensors.index.json": {
+            "sha256": "2e97890b24a47b9c290489efeb2b68b7e4dd4101360de80122165ebae4e0d6cf",
+            "bytes": 81008
+          },
+          "tokenizer.json": {
+            "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+            "bytes": 19989325
+          },
+          "tokenizer_config.json": {
+            "sha256": "386ba246ba3dfa4d3a21d8bc8712eba38de558e5ac94c2c90436d8f94d519d5e",
+            "bytes": 1160
+          }
+        },
+        "deploy-int4": {
+          "LICENSE": {
+            "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+            "bytes": 11544
+          },
+          "README.md": {
+            "sha256": "748c964f9b7e5f2c3770ce013bbc0153be7c54311d9692c343b6188eefe77ac6",
+            "bytes": 81
+          },
+          "chat_template.jinja": {
+            "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+            "bytes": 7756
+          },
+          "config.json": {
+            "sha256": "8591d683d8d132234766399897415b9427967c05e77c1c169a40de3e81177e62",
+            "bytes": 2878
+          },
+          "model.safetensors": {
+            "sha256": "69ac38a5e194765e3d489be1a1ac0e4a95a31201c83c1e256153a7180115ed73",
+            "bytes": 2367238661
+          },
+          "model.safetensors.index.json": {
+            "sha256": "2e97890b24a47b9c290489efeb2b68b7e4dd4101360de80122165ebae4e0d6cf",
+            "bytes": 81008
+          },
+          "tokenizer.json": {
+            "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+            "bytes": 19989325
+          },
+          "tokenizer_config.json": {
+            "sha256": "386ba246ba3dfa4d3a21d8bc8712eba38de558e5ac94c2c90436d8f94d519d5e",
+            "bytes": 1160
+          }
+        }
+      },
+      "original_records": [
+        {
+          "path": "releases/artifacts/WeightForge-4B-Tools-v0.1/freeze.json",
+          "sha256": "5881072110eabf314764959315b0e0b103d9f9889a1b436906c8bae955c8e0a3",
+          "bytes": 7707
+        },
+        {
+          "path": "releases/artifacts/WeightForge-4B-Tools-v0.1/upstream.json",
+          "sha256": "7d69694deefc67af517c0733c66627dbdb73afb62413154c806b0f7bc0354d74",
+          "bytes": 2949
+        },
+        {
+          "path": "releases/artifacts/WeightForge-4B-Tools-v0.1/data-manifest.json",
+          "sha256": "9d5aa2fa9878904d889fa7cbed87279e6c0715100263ae3f9d902100be95e1b4",
+          "bytes": 1314
+        },
+        {
+          "path": "releases/artifacts/WeightForge-4B-Tools-v0.1/release-selection.json",
+          "sha256": "a9d7513ac0a3f958cee433dd26af7aee00859f8d45ceededfed3c2bcc61388bf",
+          "bytes": 999
+        },
+        {
+          "path": "releases/artifacts/WeightForge-4B-Tools-v0.1/tokenization-parity.json",
+          "sha256": "663d774da091a0c2a56749f53043ae9155aa07df80fe51bfe77b18fb6f963cbf",
+          "bytes": 1103
+        }
+      ],
+      "staged_smoke_requirements": {
+        "mlx": "0.32.2",
+        "mlx-lm": "0.31.3",
+        "transformers": "5.17.0"
+      },
+      "approved_huggingface_repository": "zayyanxlatif/WeightForge-4B-Tools-INT4",
+      "lab_adaptation_license": "Apache-2.0",
+      "final_package_inventory": {
+        "path": "final-release/huggingface/weightforge/UPLOAD-SHA256SUMS",
+        "sha256": "b6f900384d6f59b25b10d6ea0b4c79407941e19dc458bdb859c3f8a5acc44508",
+        "bytes": 1318
+      },
+      "final_runtime_inventory": {
+        "path": "final-release/huggingface/weightforge/MODEL-SHA256SUMS",
+        "sha256": "32606282fc4828553f0d70f66a6f4af623b38253fb302463cfcd512f88bf448a",
+        "bytes": 586
+      },
+      "final_package_provenance": {
+        "path": "final-release/huggingface/weightforge/PROVENANCE.json",
+        "sha256": "1439dc0dc093cf93f21e61df74585f7cbb8a5f31fb79dfc9e3a665f7e4563939",
+        "bytes": 7843
+      }
+    },
+    "qwen3.5-4b-matched-affine-int4-parent": {
+      "role": "matched_unadapted_control",
+      "format": "same Qwen3.5-4B source, affine INT4 group 64",
+      "original_files": {
+        "LICENSE": {
+          "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+          "bytes": 11544
+        },
+        "README.md": {
+          "sha256": "748c964f9b7e5f2c3770ce013bbc0153be7c54311d9692c343b6188eefe77ac6",
+          "bytes": 81
+        },
+        "chat_template.jinja": {
+          "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+          "bytes": 7756
+        },
+        "config.json": {
+          "sha256": "8591d683d8d132234766399897415b9427967c05e77c1c169a40de3e81177e62",
+          "bytes": 2878
+        },
+        "model.safetensors": {
+          "sha256": "d58b87def677c7b3235e21cdca85289a162a5ba8949687b9573592e3c74cd477",
+          "bytes": 2367238661
+        },
+        "model.safetensors.index.json": {
+          "sha256": "2e97890b24a47b9c290489efeb2b68b7e4dd4101360de80122165ebae4e0d6cf",
+          "bytes": 81008
+        },
+        "tokenizer.json": {
+          "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+          "bytes": 19989325
+        },
+        "tokenizer_config.json": {
+          "sha256": "386ba246ba3dfa4d3a21d8bc8712eba38de558e5ac94c2c90436d8f94d519d5e",
+          "bytes": 1160
+        }
+      }
+    },
+    "sentry-qwen3-1.7b-rank4-step48-bf16-advisory": {
+      "display_name": "Sentry Qwen3-1.7B Rank-4 Advisory",
+      "role": "final_research_package_target",
+      "format": "MLX LoRA adapter attached to exact BF16 base",
+      "parent": "qwen3-1.7b-matched-bf16-parent",
+      "upstream": {
+        "repository": "Qwen/Qwen3-1.7B",
+        "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+        "license": "Apache-2.0",
+        "url": "https://huggingface.co/Qwen/Qwen3-1.7B/tree/70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+        "files": {
+          "LICENSE": {
+            "bytes": 11343,
+            "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+          },
+          "README.md": {
+            "bytes": 13963,
+            "sha256": "257e52c419dac2258852643f18af6c974f21f8c6c1b6f371b6cca6201cf29091"
+          },
+          "config.json": {
+            "bytes": 726,
+            "sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197"
+          },
+          "generation_config.json": {
+            "bytes": 239,
+            "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+          },
+          "merges.txt": {
+            "bytes": 1671853,
+            "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+          },
+          "vocab.json": {
+            "bytes": 2776833,
+            "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+          },
+          "tokenizer.json": {
+            "bytes": 11422654,
+            "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+          },
+          "tokenizer_config.json": {
+            "bytes": 9732,
+            "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+          },
+          "model.safetensors.index.json": {
+            "bytes": 25605,
+            "sha256": "0d660e94b165eb912669a5249dff44b83188c4777a07ddb9611fb78d91b0578d"
+          },
+          "model-00001-of-00002.safetensors": {
+            "bytes": 3441185608,
+            "sha256": "169ad53ec313c3a34b06c0809216e4fc072cce444a5d4ff2b59690d064130ed5"
+          },
+          "model-00002-of-00002.safetensors": {
+            "bytes": 622329984,
+            "sha256": "912becff8d60672aa8628ef08c05898d9adf17c2ad4ae3caf99b065622fdeff9"
+          }
+        }
+      },
+      "local_package": "final-release/huggingface/sentry",
+      "original_adapter_files": {
+        "adapters.safetensors": {
+          "sha256": "426dcc67cffdafaf5c4031cf939c529afbdf71adc1cacd561d000feeb1e56f13",
+          "bytes": 4992631
+        },
+        "adapter_config.json": {
+          "sha256": "655e953fc55f4babb373624df46fc2811685a716c994f60c97e5acdb10b9b739",
+          "bytes": 1157
+        }
+      },
+      "tensor_inventory": {
+        "arrays": 112,
+        "scalar_count": 1245184,
+        "dtypes": [
+          "F32"
+        ]
+      },
+      "checkpoint_tag": "rank4/0000048_adapters.safetensors",
+      "original_records": [
+        {
+          "path": "docs/redevelopment/qwen3-1.7b-provenance.json",
+          "sha256": "ce67b71629a0cfa1aca99718f404a5f2bcf38e4f4332b9bbab1811b1df1c8829",
+          "bytes": 1683
+        },
+        {
+          "path": "docs/redevelopment/sentry-intent-lora-results.json",
+          "sha256": "37755a2e7e864e85b8cd77c871705299fe190d5ca1c4f0451abd530dc6cc758c",
+          "bytes": 133865
+        },
+        {
+          "path": "runs/redevelopment/sentry/intent-lora-1p7b-20261126T1630Z/weight-update-proof.json",
+          "sha256": "0ae21b5a13e8ec6157b548c0f5a2fc1d1efdda81ce8ecad2d7603ed515b5665a",
+          "bytes": 569
+        }
+      ],
+      "staged_inference_settings_and_weight_files": {
+        "adapter/adapter_config.json": {
+          "sha256": "aad8d1edde9458d0331ca02be858ebc50c2069eca68100f552ec80a572fcb3c7",
+          "bytes": 130
+        },
+        "adapter/adapters.safetensors": {
+          "sha256": "426dcc67cffdafaf5c4031cf939c529afbdf71adc1cacd561d000feeb1e56f13",
+          "bytes": 4992631
+        },
+        "assess.py": {
+          "sha256": "13f24b4729a883c2b95b5de48ad92a1af051b69d58f1d0bc4854fa33dc71b9ee",
+          "bytes": 9110
+        }
+      },
+      "sanitized_config_source_fields": [
+        "fine_tune_type",
+        "num_layers",
+        "lora_parameters"
+      ],
+      "staged_smoke_requirements": {
+        "mlx": "0.32.2",
+        "mlx-lm": "0.31.3",
+        "transformers": "5.17.0"
+      },
+      "approved_huggingface_repository": "zayyanxlatif/Sentry-1.7B-Intent-Advisory-LoRA",
+      "lab_adaptation_license": "Apache-2.0",
+      "final_package_inventory": {
+        "path": "final-release/huggingface/sentry/SHA256SUMS",
+        "sha256": "e048b2bfedf4bf8158c88403d7e91a2750d22104bbf598c9f45e86b4a4dcdbc4",
+        "bytes": 1177
+      },
+      "final_package_provenance": {
+        "path": "final-release/huggingface/sentry/provenance.json",
+        "sha256": "30c3f13ecaf56703d27c6d3b7d541856a32443feab39fdcf5f67a260f2c4390a",
+        "bytes": 8852
+      }
+    },
+    "qwen3-1.7b-matched-bf16-parent": {
+      "role": "matched_unadapted_control",
+      "format": "exact upstream Qwen3-1.7B BF16 base, no LoRA",
+      "backbone_reference": "sentry-qwen3-1.7b-rank4-step48-bf16-advisory"
+    },
+    "weightforge-qv64-int4-overlay": {
+      "role": "historical_comparator_only",
+      "format": "rank-4 Q/V overlay attached to the same WeightForge INT4 parent",
+      "parent": "qwen3.5-4b-matched-affine-int4-parent",
+      "adapter_sha256": "62199c49915d57b01df33a9cce4efb8932e58142acfa52f8db0533516256ffe5",
+      "adapter_config_sha256": "86718f62cac1e2d5f35d532248622ab3881aca87409f03c2e377543d8a458d97",
+      "original_records": [
+        {
+          "path": "docs/redevelopment/weightforge-qv64-freeze.json",
+          "sha256": "298cd106a7ee55260fc68890bf9f2b878bf10e18ed84b990f9f9f5c40a1ac50e",
+          "bytes": 6530
+        },
+        {
+          "path": "docs/benchmark-expansion/weightforge-public.md",
+          "sha256": "713f990c170e4b9e8d19e3538a3898613a6aa0fcde81bace482849120d213c7b",
+          "bytes": 14164
+        },
+        {
+          "path": "docs/benchmark-expansion/mbpp-receipt.json",
+          "sha256": "62c230c8634147d69dad45c65dccbd1e7f4efe4dab28499fbdbe51899517cc36",
+          "bytes": 28162
+        }
+      ]
+    },
+    "sentry-0.6b-v0.1-int4": {
+      "role": "historical_comparator_only",
+      "format": "historical Qwen3-0.6B adapted standalone INT4 export",
+      "upstream_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "weight_sha256": "4d10d596057453f4d3455e58e47fbb37b7be4a6a02fb67bc8f5ac38eb10eea55",
+      "original_records": [
+        {
+          "path": "releases/artifacts/MCP-Guard-Sentry-0.6B-v0.1/manifest.json",
+          "sha256": "4d4daecd966f43b305c9313c63fc60444e91475bb4e3569cbae2dbdd48896e74",
+          "bytes": 23782
+        },
+        {
+          "path": "docs/benchmark-expansion/inference.md",
+          "sha256": "05224c2d2fcde5f73af4d4047cd70f0d901d4f6ad1d002d61e4a425af56a8083",
+          "bytes": 12337
+        },
+        {
+          "path": "docs/benchmark-expansion/training-telemetry.md",
+          "sha256": "01e46b4a0a87dbf924e2f81cf8123201b94cd69279a189cf210a9ede1ad5c342",
+          "bytes": 3934
+        }
+      ]
+    }
+  },
+  "datasets": {
+    "weightforge-procedural-workflows": {
+      "source_kind": "original synthetic workflow generator with deterministic SQLite state verification",
+      "local_content": "Derived rows remain in the source lab checkout.",
+      "manifest": {
+        "source": "original procedural synthetic fixtures",
+        "split_specs": {
+          "train": {
+            "families": 18,
+            "episodes": 72,
+            "supervised_turns": 204,
+            "episode_kinds": {
+              "reconcile": 12,
+              "query": 12,
+              "retry": 12,
+              "schema": 12,
+              "page": 12,
+              "clarify": 8,
+              "no_tool": 4
+            },
+            "files": {
+              "train.cases.jsonl": "b078ebaae60b94de8cf1c3af9a68bf0c4ab1d88a36c0b10a502b54534d25933c",
+              "train.turns.jsonl": "10b70aa6748759fd229f491502223395bb5613cd3e9b26edf34a4496f6342c86"
+            }
+          },
+          "valid": {
+            "families": 7,
+            "episodes": 14,
+            "supervised_turns": 36,
+            "episode_kinds": {
+              "reconcile": 2,
+              "query": 2,
+              "retry": 2,
+              "schema": 2,
+              "page": 2,
+              "clarify": 2,
+              "no_tool": 2
+            },
+            "files": {
+              "valid.cases.jsonl": "e25c294e3b5d80be841f0aabb0b5d0adc04b5bd99a34b0d769a513178a9c7680",
+              "valid.turns.jsonl": "d6905a1f9c026c666868c4f50ca3e25272e43a1b308b692e2f415c6fd17a101d"
+            }
+          }
+        },
+        "teacher": "deterministic state-verified oracles",
+        "source_sha256": "362d33a634ed703642e1fb21bd3b994f746123ce2d9e2551fb656724433a8153",
+        "licenses": "Self-generated synthetic examples; no third-party or held-out labels in training."
+      },
+      "evidence": [
+        {
+          "path": "releases/artifacts/WeightForge-4B-Tools-v0.1/data-manifest.json",
+          "sha256": "9d5aa2fa9878904d889fa7cbed87279e6c0715100263ae3f9d902100be95e1b4",
+          "bytes": 1314
+        },
+        {
+          "path": "releases/artifacts/WeightForge-4B-Tools-v0.1/selected-training-exposure.json",
+          "sha256": "bad5ed82b716f388f9c6e586a635279f5c28062a65f1aa08dfd84af4357a82d7",
+          "bytes": 417
+        },
+        {
+          "path": "releases/weightforge_data.py",
+          "sha256": "362d33a634ed703642e1fb21bd3b994f746123ce2d9e2551fb656724433a8153",
+          "bytes": 11985
+        }
+      ]
+    },
+    "bfcl-v4-static-python": {
+      "role": "public evaluation only",
+      "revision": "f7cf7359b7ac615a0b294831c5ba2bc95ee4a000",
+      "source": "https://github.com/ShishirPatil/gorilla/tree/f7cf7359b7ac615a0b294831c5ba2bc95ee4a000/berkeley-function-call-leaderboard",
+      "row_count": 1000,
+      "categories": {
+        "simple_python": 400,
+        "multiple": 200,
+        "parallel": 200,
+        "parallel_multiple": 200
+      },
+      "grading": "Native Qwen tool parse checked with the pinned upstream AST grader.",
+      "storage": "Original requests, targets and generated model text remain local."
+    },
+    "sentry-massive-english-train": {
+      "source_kind": "MASSIVE v1.1 en-US TRAIN utterances with added simulated proposals, receipt records and references",
+      "source_file": "https://huggingface.co/datasets/AmazonScience/massive/blob/ed58ac423a2f4121720918bf5301577edce4ffd3/en-US/train/0000.parquet",
+      "source_license": "CC-BY-4.0",
+      "source_card": "https://huggingface.co/datasets/AmazonScience/massive/blob/ff6bd8e4b27c3543e4f8fe2108f32bb95a6f8740/README.md",
+      "source_sha256": "9c8b3ce8a96ec3b0d4aee104d8778d9f6bacdbd18f2cea232f6d8333d24401b1",
+      "source_rows_verified": 11514,
+      "phases": {
+        "fit": {
+          "families": [
+            "clock",
+            "learning",
+            "lighting",
+            "list"
+          ],
+          "cases": 464,
+          "classes": {
+            "match": 220,
+            "mismatch": 220,
+            "clarify": 24
+          },
+          "origins": {
+            "massive-train-derived": 376,
+            "adjudicated-argument": 64,
+            "adjudicated-ambiguity": 24
+          },
+          "unique_upstream_ids": 188
+        },
+        "calibration": {
+          "families": [
+            "audio_level"
+          ],
+          "cases": 64,
+          "classes": {
+            "match": 28,
+            "mismatch": 28,
+            "clarify": 8
+          },
+          "origins": {
+            "fresh-massive-train-derived": 56,
+            "authored-ambiguity": 8
+          },
+          "unique_upstream_ids": 28
+        },
+        "development": {
+          "families": [
+            "alarm",
+            "media"
+          ],
+          "cases": 232,
+          "classes": {
+            "match": 108,
+            "mismatch": 108,
+            "clarify": 16
+          },
+          "origins": {
+            "fresh-massive-train-derived": 216,
+            "authored-ambiguity": 16
+          },
+          "unique_upstream_ids": 108
+        },
+        "tiny": {
+          "families": [
+            "clock",
+            "learning",
+            "lighting",
+            "list"
+          ],
+          "cases": 18,
+          "classes": {
+            "match": 6,
+            "mismatch": 6,
+            "clarify": 6
+          },
+          "origins": {
+            "massive-train-derived": 11,
+            "adjudicated-argument": 1,
+            "adjudicated-ambiguity": 6
+          },
+          "unique_upstream_ids": 11
+        },
+        "pilot": {
+          "families": [
+            "clock",
+            "learning",
+            "lighting",
+            "list"
+          ],
+          "cases": 184,
+          "classes": {
+            "clarify": 24,
+            "match": 80,
+            "mismatch": 80
+          },
+          "origins": {
+            "adjudicated-ambiguity": 24,
+            "adjudicated-argument": 64,
+            "massive-train-derived": 96
+          },
+          "unique_upstream_ids": 86
+        }
+      },
+      "pilot_trainer_validation_rows": 12,
+      "source_ids_and_utterances_excluded_from_earlier_cohorts": true,
+      "prior_grouped_packet_sha256": "1d9c1ef742505ad8a54c57a302af91ac3cc951d29699a29c7c4e01fac82c6ecd",
+      "evidence": [
+        {
+          "path": "runs/redevelopment/sentry/intent-lora-1p7b-20261126T1630Z/data-receipt.json",
+          "sha256": "90683ddb25d989adce8d3b2fd30560e437ccca87017bea9afc327ed71089527c",
+          "bytes": 2681
+        },
+        {
+          "path": "runs/redevelopment/sentry/intent-lora-1p7b-20261126T1630Z/frozen-pilot-protocol.json",
+          "sha256": "5fe81ca4c0251658baad19a4cac82c77f9a55e38068a5374ff13d849305a71a2",
+          "bytes": 1677
+        },
+        {
+          "path": "runs/redevelopment/sentry/intent-lora-1p7b-20261126T1630Z/pilot-data/train.jsonl",
+          "sha256": "ffc9cc0ac92ff2817a42a451ded9f5474ac8b3b08214d48350b9b13323b27227",
+          "bytes": 186022
+        },
+        {
+          "path": "runs/redevelopment/sentry/intent-lora-1p7b-20261126T1630Z/pilot-data/valid.jsonl",
+          "sha256": "155bdb5aed7cfd52d9995450a49c19d3cdb593d09df62aef2764dd0dc1352ca6",
+          "bytes": 12144
+        },
+        {
+          "path": "docs/redevelopment/sentry-trusted-intent.md",
+          "sha256": "54a2252393f90e1039fbbdd3e52ba3e099b8172bacfc05923c1f58743ced96fc",
+          "bytes": 6365
+        },
+        {
+          "path": "sentry/intent_lora_data.py",
+          "sha256": "2d24ed7d52684679607836fa51b1430a463b4d90beff834b6719fd7960b30261",
+          "bytes": 12006
+        }
+      ]
+    }
+  },
+  "runs": {
+    "weightforge-step12-training": {
+      "artifact": "weightforge-4b-tools-v0.1-step12-int4",
+      "dataset": "weightforge-procedural-workflows",
+      "statistics": {
+        "updates": 12,
+        "sequence_positions": 7850,
+        "target_positions": 428,
+        "optimizer_interval_seconds": 6.008455789997242,
+        "peak_mlx_bytes": 9547171052,
+        "elapsed_through_final_save_and_validation_seconds": 13.366985209053382
+      },
+      "rank": 8,
+      "blocks": 2,
+      "trainable_scalars": 565248,
+      "trained_unique_episodes": 9,
+      "trained_unique_families": 7,
+      "optimizer": "AdamW",
+      "seed": 17,
+      "learning_rate": 0.0001,
+      "source_precision": "BF16",
+      "evidence": [
+        {
+          "path": "releases/artifacts/WeightForge-4B-Tools-v0.1/adapter-config.json",
+          "sha256": "577485bab8195637a710e67aadc3b698c3677cf11e83f8a1af01a9bbdd143788",
+          "bytes": 1601
+        },
+        {
+          "path": "releases/artifacts/WeightForge-4B-Tools-v0.1/train-selected.jsonl",
+          "sha256": "a49b5d2b87f7d9e573af53f4a669105083f351bd2e6c7b1f026202f6bf6702ae",
+          "bytes": 2616
+        },
+        {
+          "path": "releases/artifacts/WeightForge-4B-Tools-v0.1/selected-training-exposure.json",
+          "sha256": "bad5ed82b716f388f9c6e586a635279f5c28062a65f1aa08dfd84af4357a82d7",
+          "bytes": 417
+        }
+      ],
+      "replay_section": "weightforge-source-lab-reconstruction"
+    },
+    "weightforge-step12-bfcl-ast-replay": {
+      "artifact": "weightforge-4b-tools-v0.1-step12-int4",
+      "parent": "qwen3.5-4b-matched-affine-int4-parent",
+      "dataset": "bfcl-v4-static-python",
+      "parent_pass": 699,
+      "adapted_pass": 793,
+      "denominator": 1000,
+      "gains": 101,
+      "losses": 7,
+      "mode": "Static Python schema/argument score. No tool execution.",
+      "archived_capture_references": {
+        "simple_python": {
+          "base-int4": {
+            "cases": 400,
+            "raw_batches_sha256": "fd892795bdeb040839f55fa6472982b311cd37eca8869778b5abb294510fc8c3",
+            "manifest_sha256": "2d8a3f22838d65615d5fc7ee074f4673165830d8f65a1cb2b27d69ac65e00648",
+            "archived_grades_sha256": "39f490b32364fbb65d58e4516f9c4edbc3272cff031268661c29bcaf0e83522b"
+          },
+          "deploy-int4": {
+            "cases": 400,
+            "raw_batches_sha256": "19dc81411b7e72a4f2646319f089f2a876354521348beaecd2e294c6a8a52b9a",
+            "manifest_sha256": "900ff8188265d4cf1abec1a67586ace7efcdd61a2cc944bbac70e7de523bc565",
+            "archived_grades_sha256": "3629b41fd99a4097680a6165074ddfa3587560ff246392de97c33e86b57e3aa7"
+          }
+        },
+        "multiple": {
+          "base-int4": {
+            "cases": 200,
+            "raw_batches_sha256": "95b80be1470045b274c325d2adb1d2856f49b6a328e7a0610d7a0238fe82fef3",
+            "manifest_sha256": "37516cc2796e709ca83521f77beca3e70da31961bdd776d0312a8b807ab2eb10",
+            "archived_grades_sha256": "27e7346ccdb762c47f2398c97efb0a64d3b2cadb83cf9a003680448867eeb384"
+          },
+          "deploy-int4": {
+            "cases": 200,
+            "raw_batches_sha256": "2ffd0251556ecab89126b583564d0a6663158cee6f4952fa1618a3dfca3434a5",
+            "manifest_sha256": "755962a10ddacf789e92e37330ae441930f690478874c12e755ee9464df4f3bc",
+            "archived_grades_sha256": "6936c10f5ec3b3f353af049ec5b401f4b1651fbb433f63722d17f4d25ab2c200"
+          }
+        },
+        "parallel": {
+          "base-int4": {
+            "cases": 200,
+            "raw_batches_sha256": "453aa7fef6b0e9de220f87fa63e140e19c8c469312fc3ec0ac5278aa9784a8aa",
+            "manifest_sha256": "d709dbfaf0c0f2d5e88c510e128184db1abdbbde561ea709b0bc349f1d06a38d",
+            "archived_grades_sha256": "6d57bc071d4f8d1f4177929b5b6f5563b1f484aa9bcdd48a2cccd736b019b098"
+          },
+          "deploy-int4": {
+            "cases": 200,
+            "raw_batches_sha256": "6cd53cffedefa4dd6e6a0da323232526377b09d380a750c054486cabfcd83d5d",
+            "manifest_sha256": "7812179b850bb68523348c504915e316e7969bb115c82b66b389ceabccfbf6e8",
+            "archived_grades_sha256": "01d3b82c445fef303e7587f98cd0989a9c39c3888ce7e23d30d53b11d9d86a95"
+          }
+        },
+        "parallel_multiple": {
+          "base-int4": {
+            "cases": 200,
+            "raw_batches_sha256": "6a185a07fa544c497aaa37f3a441e822bb57b690503d2bb6c085ca25bf2a9349",
+            "manifest_sha256": "31c6720eb3440dee69d840f412085da508bcfafb60840b7855a11039a29256c6",
+            "archived_grades_sha256": "187da07df14b0f8e1a27f479fc3359538b0ea3935720ef401f674848ce706d09"
+          },
+          "deploy-int4": {
+            "cases": 200,
+            "raw_batches_sha256": "a7ac08bc67d539371639f3a5482e53705cf5331e092c2ed36d16da5834012bc8",
+            "manifest_sha256": "e47b6ea7e094658edeeeb1bd452a471ed6ac4cd76e14fe23fc1d1b11b20cbf7d",
+            "archived_grades_sha256": "87a870fccfbe142cfb0467c98f8b270cd4c96d2b5e513cd3a6a5fb3fff1643bf"
+          }
+        }
+      },
+      "disagreement_counts": {
+        "simple_python": {
+          "both_correct": 338,
+          "candidate_only": 24,
+          "parent_only": 5,
+          "both_wrong": 33
+        },
+        "multiple": {
+          "both_correct": 184,
+          "candidate_only": 3,
+          "parent_only": 1,
+          "both_wrong": 12
+        },
+        "parallel": {
+          "both_correct": 84,
+          "candidate_only": 40,
+          "parent_only": 0,
+          "both_wrong": 76
+        },
+        "parallel_multiple": {
+          "both_correct": 86,
+          "candidate_only": 34,
+          "parent_only": 1,
+          "both_wrong": 79
+        }
+      },
+      "portable_reference": "../evidence/replay-aggregates.json",
+      "replay_section": "archived-grading-in-the-source-lab",
+      "portable_staged_replay": {
+        "portable_path": "../evidence/replay-aggregates.json",
+        "sha256": "a2894e5d2a94e4790e89629f4a96ac12c2a9b9cd4753b802de7f474e5e4f7a1f",
+        "bytes": 8117
+      },
+      "decode_settings": {
+        "seed": 17,
+        "temperature": 0,
+        "thinking": false,
+        "batch_size": 16,
+        "max_generated_tokens": 192
+      }
+    },
+    "weightforge-step12-native-workflow-telemetry": {
+      "artifact": "weightforge-4b-tools-v0.1-step12-int4",
+      "parent": "qwen3.5-4b-matched-affine-int4-parent",
+      "dataset": "weightforge-procedural-workflows",
+      "method": "14 public-development whole episodes against a typed local simulator.",
+      "settings": {
+        "n": 14,
+        "case_sha256": "e25c294e3b5d80be841f0aabb0b5d0adc04b5bd99a34b0d769a513178a9c7680",
+        "seed": 17,
+        "max_tokens": 96,
+        "max_turns": 8,
+        "temperature": 0,
+        "thinking": false,
+        "eval_source_sha256": "c51d034e09bf643869cbf8a0650a3da2bc77cfe738f0d370173f970b17118eb7"
+      },
+      "arms": {
+        "qwen3.5-4b-matched-affine-int4-parent": {
+          "cases": 14,
+          "pass": 14,
+          "turns": 36,
+          "turn_ttft_p50_ms": 353.49318699445575,
+          "turn_ttft_p95_ms_nearest_rank": 422.74512501899153,
+          "turn_decode_tps_p50": 99.31378209938714,
+          "episode_wall_p50_ms": 2117.2234375262633,
+          "episode_wall_p95_ms_nearest_rank": 3362.0354590239003,
+          "output_tokens_total": 1204,
+          "peak_mlx_bytes": 3615092384,
+          "source_sha256": "c8a1442c9340c74e0eec0268f44e35bd0146a839d65fd6482d90cb5c58a2acdd"
+        },
+        "weightforge-4b-tools-v0.1-step12-int4": {
+          "cases": 14,
+          "pass": 14,
+          "turns": 36,
+          "turn_ttft_p50_ms": 361.94535403046757,
+          "turn_ttft_p95_ms_nearest_rank": 421.4844999369234,
+          "turn_decode_tps_p50": 99.21290189230322,
+          "episode_wall_p50_ms": 2147.9282079963014,
+          "episode_wall_p95_ms_nearest_rank": 3324.611832969822,
+          "output_tokens_total": 1204,
+          "peak_mlx_bytes": 3615092384,
+          "source_sha256": "9acfcf206c14135fea92b33d61e624e9b03838cba0e7baff41be12d253573c08"
+        }
+      },
+      "evidence": [
+        {
+          "path": "docs/evidence/weightforge-native-telemetry.json",
+          "sha256": "b520ec6c48a0f6beddb0ed4d1e2805d0366b8bf2d5fae719bedd470898ab62af",
+          "bytes": 6273
+        },
+        {
+          "path": "releases/artifacts/WeightForge-4B-Tools-v0.1/export-validation-summary.json",
+          "sha256": "4fb5a7175ce2e3f757b16b4192986c3a3bdaa4381e9ec126571468501d45ca4b",
+          "bytes": 3518
+        }
+      ],
+      "replay_section": "weightforge-source-lab-reconstruction"
+    },
+    "weightforge-step12-independent-aggregate": {
+      "artifact": "weightforge-4b-tools-v0.1-step12-int4",
+      "parent": "qwen3.5-4b-matched-affine-int4-parent",
+      "denominator": 16,
+      "adapted_pass": 14,
+      "parent_pass": 15,
+      "adapted_recovery_pass": 2,
+      "parent_recovery_pass": 3,
+      "recovery_denominator": 3,
+      "mode": "Sealed independently authored simulation cohort. Historical aggregate only.",
+      "evidence": [
+        {
+          "path": "docs/DERIVED_RELEASE_INDEPENDENT.md",
+          "sha256": "f6ffaeedddf00bf3564a25e1302ce199efdbcf6896646561ed309b00b0ef2ed8",
+          "bytes": 25951
+        },
+        {
+          "path": "releases/artifacts/WeightForge-4B-Tools-v0.1/protocol.md",
+          "sha256": "355f5385eefb7351dcf2ee98a9ca46e14b60ced7242101122b0cbcec38ba7e08",
+          "bytes": 9960
+        }
+      ],
+      "replay_section": null
+    },
+    "weightforge-step12-installed-mlx-engineering": {
+      "artifact": "weightforge-4b-tools-v0.1-step12-int4",
+      "parent": "qwen3.5-4b-matched-affine-int4-parent",
+      "metrics": {
+        "official_trials": [
+          {
+            "artifact": "weightforge-4b-tools-v0.1-step12-int4",
+            "prompt_tokens": 512,
+            "batch": 1,
+            "trials": 3,
+            "prompt_tokens_per_second_median": 2235.921,
+            "engine_generation_tokens_per_second_median": 98.802,
+            "output_tokens_per_wall_second_median": 64.51612903225806,
+            "wall_seconds_median": 0.992,
+            "peak_mlx_decimal_gb_max": 3.38
+          },
+          {
+            "artifact": "weightforge-4b-tools-v0.1-step12-int4",
+            "prompt_tokens": 512,
+            "batch": 4,
+            "trials": 3,
+            "prompt_tokens_per_second_median": 2287.142,
+            "engine_generation_tokens_per_second_median": 254.167,
+            "output_tokens_per_wall_second_median": 134.66596528143083,
+            "wall_seconds_median": 1.901,
+            "peak_mlx_decimal_gb_max": 4.223
+          },
+          {
+            "artifact": "weightforge-4b-tools-v0.1-step12-int4",
+            "prompt_tokens": 2048,
+            "batch": 1,
+            "trials": 3,
+            "prompt_tokens_per_second_median": 2338.985,
+            "engine_generation_tokens_per_second_median": 97.337,
+            "output_tokens_per_wall_second_median": 39.16768665850673,
+            "wall_seconds_median": 1.634,
+            "peak_mlx_decimal_gb_max": 4.149
+          },
+          {
+            "artifact": "weightforge-4b-tools-v0.1-step12-int4",
+            "prompt_tokens": 2048,
+            "batch": 4,
+            "trials": 3,
+            "prompt_tokens_per_second_median": 2189.484,
+            "engine_generation_tokens_per_second_median": 240.283,
+            "output_tokens_per_wall_second_median": 53.20033250207813,
+            "wall_seconds_median": 4.812,
+            "peak_mlx_decimal_gb_max": 7.05
+          },
+          {
+            "artifact": "qwen3.5-4b-matched-affine-int4-parent",
+            "prompt_tokens": 512,
+            "batch": 1,
+            "trials": 3,
+            "prompt_tokens_per_second_median": 2228.599,
+            "engine_generation_tokens_per_second_median": 97.791,
+            "output_tokens_per_wall_second_median": 64.321608040201,
+            "wall_seconds_median": 0.995,
+            "peak_mlx_decimal_gb_max": 3.38
+          },
+          {
+            "artifact": "qwen3.5-4b-matched-affine-int4-parent",
+            "prompt_tokens": 512,
+            "batch": 4,
+            "trials": 3,
+            "prompt_tokens_per_second_median": 2282.374,
+            "engine_generation_tokens_per_second_median": 254.12,
+            "output_tokens_per_wall_second_median": 134.45378151260505,
+            "wall_seconds_median": 1.904,
+            "peak_mlx_decimal_gb_max": 4.223
+          },
+          {
+            "artifact": "qwen3.5-4b-matched-affine-int4-parent",
+            "prompt_tokens": 2048,
+            "batch": 1,
+            "trials": 3,
+            "prompt_tokens_per_second_median": 2417.314,
+            "engine_generation_tokens_per_second_median": 97.387,
+            "output_tokens_per_wall_second_median": 40.0,
+            "wall_seconds_median": 1.6,
+            "peak_mlx_decimal_gb_max": 4.149
+          },
+          {
+            "artifact": "qwen3.5-4b-matched-affine-int4-parent",
+            "prompt_tokens": 2048,
+            "batch": 4,
+            "trials": 3,
+            "prompt_tokens_per_second_median": 2162.85,
+            "engine_generation_tokens_per_second_median": 239.749,
+            "output_tokens_per_wall_second_median": 52.750875746960645,
+            "wall_seconds_median": 4.853,
+            "peak_mlx_decimal_gb_max": 7.05
+          }
+        ],
+        "streaming_trials": [
+          {
+            "artifact": "weightforge-4b-tools-v0.1-step12-int4",
+            "context": 512,
+            "mode": "process_cold",
+            "active_replicas": null,
+            "n": 3,
+            "exact_copies": 3,
+            "ttft_ms": {
+              "n": 3,
+              "median": 355.3372919559479,
+              "p95_nearest_rank": 358.7377918884158
+            },
+            "request_wall_ms": {
+              "n": 3,
+              "median": 780.7104169623926,
+              "p95_nearest_rank": 781.5642079804093
+            },
+            "host_first_engine_token_elapsed_ms": {
+              "n": 3,
+              "median": 1611.5301670506597,
+              "p95_nearest_rank": 1639.6537917898968
+            },
+            "peak_mlx_bytes_per_process": 3378742980,
+            "peak_rss_bytes_per_process": 3005054976,
+            "arrival_to_response_ms": null,
+            "queued_ms": null
+          },
+          {
+            "artifact": "weightforge-4b-tools-v0.1-step12-int4",
+            "context": 512,
+            "mode": "resident_fresh",
+            "active_replicas": null,
+            "n": 5,
+            "exact_copies": 5,
+            "ttft_ms": {
+              "n": 5,
+              "median": 325.47250005882233,
+              "p95_nearest_rank": 333.0641669454053
+            },
+            "request_wall_ms": {
+              "n": 5,
+              "median": 731.9982079789042,
+              "p95_nearest_rank": 752.1418749820441
+            },
+            "host_first_engine_token_elapsed_ms": null,
+            "peak_mlx_bytes_per_process": 3378890452,
+            "peak_rss_bytes_per_process": 3005005824,
+            "arrival_to_response_ms": null,
+            "queued_ms": null
+          },
+          {
+            "artifact": "weightforge-4b-tools-v0.1-step12-int4",
+            "context": 2048,
+            "mode": "concurrency",
+            "active_replicas": 1,
+            "n": 8,
+            "exact_copies": 8,
+            "ttft_ms": {
+              "n": 8,
+              "median": 984.5223954762332,
+              "p95_nearest_rank": 988.9192499686033
+            },
+            "request_wall_ms": {
+              "n": 8,
+              "median": 1398.8068329636008,
+              "p95_nearest_rank": 1403.3732909010723
+            },
+            "host_first_engine_token_elapsed_ms": null,
+            "peak_mlx_bytes_per_process": 4148248136,
+            "peak_rss_bytes_per_process": 3004923904,
+            "arrival_to_response_ms": {
+              "n": 8,
+              "median": 2088.0588330328465,
+              "p95_nearest_rank": 2802.2110830061138
+            },
+            "burst_requests_s": 0.7163224577925262,
+            "queued_ms": {
+              "n": 8,
+              "median": 697.404146019835,
+              "p95_nearest_rank": 1403.4318330232054
+            }
+          },
+          {
+            "artifact": "weightforge-4b-tools-v0.1-step12-int4",
+            "context": 2048,
+            "mode": "concurrency",
+            "active_replicas": 2,
+            "n": 8,
+            "exact_copies": 8,
+            "ttft_ms": {
+              "n": 8,
+              "median": 1875.344958039932,
+              "p95_nearest_rank": 1907.2670000605285
+            },
+            "request_wall_ms": {
+              "n": 8,
+              "median": 2609.4041874748655,
+              "p95_nearest_rank": 2638.944667065516
+            },
+            "host_first_engine_token_elapsed_ms": null,
+            "peak_mlx_bytes_per_process": 4148248136,
+            "peak_rss_bytes_per_process": 3005054976,
+            "arrival_to_response_ms": {
+              "n": 8,
+              "median": 2609.4467080547474,
+              "p95_nearest_rank": 2639.019416994415
+            },
+            "burst_requests_s": 0.7635451083278776,
+            "queued_ms": {
+              "n": 8,
+              "median": 0.0731245381757617,
+              "p95_nearest_rank": 0.13079203199595213
+            }
+          },
+          {
+            "artifact": "weightforge-4b-tools-v0.1-step12-int4",
+            "context": 2048,
+            "mode": "process_cold",
+            "active_replicas": null,
+            "n": 3,
+            "exact_copies": 3,
+            "ttft_ms": {
+              "n": 3,
+              "median": 970.6672918982804,
+              "p95_nearest_rank": 971.2489169323817
+            },
+            "request_wall_ms": {
+              "n": 3,
+              "median": 1399.0986669668928,
+              "p95_nearest_rank": 1404.404625063762
+            },
+            "host_first_engine_token_elapsed_ms": {
+              "n": 3,
+              "median": 2225.111332954839,
+              "p95_nearest_rank": 2228.810500819236
+            },
+            "peak_mlx_bytes_per_process": 4148198984,
+            "peak_rss_bytes_per_process": 3005054976,
+            "arrival_to_response_ms": null,
+            "queued_ms": null
+          },
+          {
+            "artifact": "weightforge-4b-tools-v0.1-step12-int4",
+            "context": 2048,
+            "mode": "resident_fresh",
+            "active_replicas": null,
+            "n": 5,
+            "exact_copies": 5,
+            "ttft_ms": {
+              "n": 5,
+              "median": 976.991291041486,
+              "p95_nearest_rank": 982.0755830733106
+            },
+            "request_wall_ms": {
+              "n": 5,
+              "median": 1393.491750000976,
+              "p95_nearest_rank": 1398.4610839979723
+            },
+            "host_first_engine_token_elapsed_ms": null,
+            "peak_mlx_bytes_per_process": 4148248136,
+            "peak_rss_bytes_per_process": 3004956672,
+            "arrival_to_response_ms": null,
+            "queued_ms": null
+          },
+          {
+            "artifact": "weightforge-4b-tools-v0.1-step12-int4",
+            "context": 2048,
+            "mode": "sustained",
+            "active_replicas": null,
+            "n": 22,
+            "exact_copies": 22,
+            "ttft_ms": {
+              "n": 22,
+              "median": 991.4917084970511,
+              "p95_nearest_rank": 1013.7536668917164
+            },
+            "request_wall_ms": {
+              "n": 22,
+              "median": 1407.1567705250345,
+              "p95_nearest_rank": 1429.80958300177
+            },
+            "host_first_engine_token_elapsed_ms": null,
+            "peak_mlx_bytes_per_process": 4148248136,
+            "peak_rss_bytes_per_process": 3004956672,
+            "elapsed_s": 31.00843458401505,
+            "requests_s": 0.7094843804640519,
+            "arrival_to_response_ms": null,
+            "queued_ms": null
+          },
+          {
+            "artifact": "qwen3.5-4b-matched-affine-int4-parent",
+            "context": 512,
+            "mode": "process_cold",
+            "active_replicas": null,
+            "n": 3,
+            "exact_copies": 3,
+            "ttft_ms": {
+              "n": 3,
+              "median": 353.61133294645697,
+              "p95_nearest_rank": 361.34125001262873
+            },
+            "request_wall_ms": {
+              "n": 3,
+              "median": 774.6212499914691,
+              "p95_nearest_rank": 781.9955000886694
+            },
+            "host_first_engine_token_elapsed_ms": {
+              "n": 3,
+              "median": 1649.7892499901354,
+              "p95_nearest_rank": 1669.4260409567505
+            },
+            "peak_mlx_bytes_per_process": 3378742980,
+            "peak_rss_bytes_per_process": 3005202432,
+            "arrival_to_response_ms": null,
+            "queued_ms": null
+          },
+          {
+            "artifact": "qwen3.5-4b-matched-affine-int4-parent",
+            "context": 512,
+            "mode": "resident_fresh",
+            "active_replicas": null,
+            "n": 5,
+            "exact_copies": 5,
+            "ttft_ms": {
+              "n": 5,
+              "median": 325.2873750170693,
+              "p95_nearest_rank": 341.1352080293
+            },
+            "request_wall_ms": {
+              "n": 5,
+              "median": 730.3019160171971,
+              "p95_nearest_rank": 749.796166899614
+            },
+            "host_first_engine_token_elapsed_ms": null,
+            "peak_mlx_bytes_per_process": 3378890452,
+            "peak_rss_bytes_per_process": 3004973056,
+            "arrival_to_response_ms": null,
+            "queued_ms": null
+          },
+          {
+            "artifact": "qwen3.5-4b-matched-affine-int4-parent",
+            "context": 2048,
+            "mode": "concurrency",
+            "active_replicas": 1,
+            "n": 8,
+            "exact_copies": 8,
+            "ttft_ms": {
+              "n": 8,
+              "median": 949.1062494926155,
+              "p95_nearest_rank": 1006.1264579417184
+            },
+            "request_wall_ms": {
+              "n": 8,
+              "median": 1373.2834169641137,
+              "p95_nearest_rank": 1419.2065000534058
+            },
+            "host_first_engine_token_elapsed_ms": null,
+            "peak_mlx_bytes_per_process": 4148248136,
+            "peak_rss_bytes_per_process": 3005005824,
+            "arrival_to_response_ms": {
+              "n": 8,
+              "median": 2047.483270522207,
+              "p95_nearest_rank": 2806.407209020108
+            },
+            "burst_requests_s": 0.7284932072410326,
+            "queued_ms": {
+              "n": 8,
+              "median": 677.8005415108055,
+              "p95_nearest_rank": 1387.1949999593198
+            }
+          },
+          {
+            "artifact": "qwen3.5-4b-matched-affine-int4-parent",
+            "context": 2048,
+            "mode": "concurrency",
+            "active_replicas": 2,
+            "n": 8,
+            "exact_copies": 8,
+            "ttft_ms": {
+              "n": 8,
+              "median": 1802.4752290220931,
+              "p95_nearest_rank": 1845.6093749264255
+            },
+            "request_wall_ms": {
+              "n": 8,
+              "median": 2538.377020973712,
+              "p95_nearest_rank": 2587.5761250499636
+            },
+            "host_first_engine_token_elapsed_ms": null,
+            "peak_mlx_bytes_per_process": 4148248136,
+            "peak_rss_bytes_per_process": 3005005824,
+            "arrival_to_response_ms": {
+              "n": 8,
+              "median": 2538.438000017777,
+              "p95_nearest_rank": 2587.613165960647
+            },
+            "burst_requests_s": 0.7865396842299222,
+            "queued_ms": {
+              "n": 8,
+              "median": 0.05464552668854594,
+              "p95_nearest_rank": 0.1284580212086439
+            }
+          },
+          {
+            "artifact": "qwen3.5-4b-matched-affine-int4-parent",
+            "context": 2048,
+            "mode": "process_cold",
+            "active_replicas": null,
+            "n": 3,
+            "exact_copies": 3,
+            "ttft_ms": {
+              "n": 3,
+              "median": 986.6687910398468,
+              "p95_nearest_rank": 988.5633341036737
+            },
+            "request_wall_ms": {
+              "n": 3,
+              "median": 1417.6019999431446,
+              "p95_nearest_rank": 1433.7045829743147
+            },
+            "host_first_engine_token_elapsed_ms": {
+              "n": 3,
+              "median": 2324.494999134913,
+              "p95_nearest_rank": 2366.028542164713
+            },
+            "peak_mlx_bytes_per_process": 4148198984,
+            "peak_rss_bytes_per_process": 3005022208,
+            "arrival_to_response_ms": null,
+            "queued_ms": null
+          },
+          {
+            "artifact": "qwen3.5-4b-matched-affine-int4-parent",
+            "context": 2048,
+            "mode": "resident_fresh",
+            "active_replicas": null,
+            "n": 5,
+            "exact_copies": 5,
+            "ttft_ms": {
+              "n": 5,
+              "median": 968.94745901227,
+              "p95_nearest_rank": 991.4013330126181
+            },
+            "request_wall_ms": {
+              "n": 5,
+              "median": 1389.4050000235438,
+              "p95_nearest_rank": 1414.180582971312
+            },
+            "host_first_engine_token_elapsed_ms": null,
+            "peak_mlx_bytes_per_process": 4148248136,
+            "peak_rss_bytes_per_process": 3005022208,
+            "arrival_to_response_ms": null,
+            "queued_ms": null
+          },
+          {
+            "artifact": "qwen3.5-4b-matched-affine-int4-parent",
+            "context": 2048,
+            "mode": "sustained",
+            "active_replicas": null,
+            "n": 22,
+            "exact_copies": 22,
+            "ttft_ms": {
+              "n": 22,
+              "median": 970.0255834613927,
+              "p95_nearest_rank": 996.0137091111392
+            },
+            "request_wall_ms": {
+              "n": 22,
+              "median": 1384.7625000053085,
+              "p95_nearest_rank": 1417.47920808848
+            },
+            "host_first_engine_token_elapsed_ms": null,
+            "peak_mlx_bytes_per_process": 4148248136,
+            "peak_rss_bytes_per_process": 3005022208,
+            "elapsed_s": 30.546214999980293,
+            "requests_s": 0.7202201647573748,
+            "arrival_to_response_ms": null,
+            "queued_ms": null
+          }
+        ]
+      },
+      "official_conditions": "512/2048 random prompt tokens, 64 forced output tokens per request, three timed trials after one warmup. Batch size four measures aggregate generation.",
+      "streaming_conditions": "Paired fresh-cache fixed-copy synthetic input, 512/2048, process startup and resident timings, 30-second sustained at 2048 and two simultaneous requests.",
+      "runtime": {
+        "mlx": [
+          "0.32.2"
+        ],
+        "mlx_lm": [
+          "0.31.3"
+        ]
+      },
+      "host": "Apple M5 Pro, 48 GiB unified memory, AC power.",
+      "evidence": [
+        {
+          "path": "docs/benchmark-expansion/inference-data/scorecard.json",
+          "sha256": "7492c095194e9660021f0ddb11df6d2d79e5f4c3ed49d448789704207cb4e292",
+          "bytes": 70874
+        },
+        {
+          "path": "docs/benchmark-expansion/inference-data/official-trials.jsonl",
+          "sha256": "646667f40131104653e7deea1bb280ffc62de6b352cd41cc9a4b7b062df86fa7",
+          "bytes": 16804
+        },
+        {
+          "path": "docs/benchmark-expansion/inference-data/serving-trials.jsonl",
+          "sha256": "96a61a7184c437941fc6ccf903cce94cbe1e81cbdce0881d61e8e9580c127396",
+          "bytes": 239117
+        }
+      ],
+      "replay_section": "apple-inference-engineering-in-the-source-lab"
+    },
+    "sentry-rank4-step48-training": {
+      "artifact": "sentry-qwen3-1.7b-rank4-step48-bf16-advisory",
+      "dataset": "sentry-massive-english-train",
+      "statistics": {
+        "updates": 48,
+        "microbatch": 4,
+        "supervised_label_or_eos_positions": 384,
+        "approx_optimizer_interval_seconds": 12.317673807443697,
+        "approx_supervised_positions_per_second": 31.174717402237494,
+        "peak_mlx_decimal_gb": 6.327,
+        "boundary": "Approximation from rounded report intervals. Positions count one label and one EOS per sampled example."
+      },
+      "pool_rows": 464,
+      "optimizer_fit_pool_rows": 184,
+      "trainer_validation_rows": 12,
+      "config": {
+        "num_layers": 8,
+        "lora_parameters": {
+          "rank": 4,
+          "scale": 4.0,
+          "dropout": 0.0
+        },
+        "seed": 791,
+        "learning_rate": 6e-05,
+        "optimizer": "adam",
+        "max_seq_length": 384,
+        "mask_prompt": true,
+        "iters": 48,
+        "batch_size": 4
+      },
+      "evidence": [
+        {
+          "path": "runs/redevelopment/sentry/intent-lora-1p7b-20261126T1630Z/rank4.log",
+          "sha256": "9f40566f142ad949814b59740703f4d99b4e07abf64f5dc24c3ff8d2bd43300b",
+          "bytes": 3026
+        },
+        {
+          "path": "runs/redevelopment/sentry/intent-lora-1p7b-20261126T1630Z/mask.json",
+          "sha256": "39dc043383858d64777b38cea18da6871027774df6fa90237d8214346527b08a",
+          "bytes": 229
+        },
+        {
+          "path": "runs/redevelopment/sentry/intent-lora-1p7b-20261126T1630Z/weighted-loss-probe.json",
+          "sha256": "715bf684300248eaa444350ee643f6d640ebcb601aa5a69687ce395744cd47e3",
+          "bytes": 168
+        },
+        {
+          "path": "sentry/intent_lora.py",
+          "sha256": "2e6993dc798a3865d0d842bf29298310ea1a385640e639d339f9f79bd15390a4",
+          "bytes": 16961
+        },
+        {
+          "path": "sentry/intent_lora_train.py",
+          "sha256": "6b078d9b19891cba0c3cbda9bb794b834d793467333e1f06dcc5730942c696a9",
+          "bytes": 2851
+        }
+      ],
+      "replay_section": "sentry-source-lab-reconstruction"
+    },
+    "sentry-rank4-step48-matched-three-example": {
+      "artifact": "sentry-qwen3-1.7b-rank4-step48-bf16-advisory",
+      "parent": "qwen3-1.7b-matched-bf16-parent",
+      "dataset": "sentry-massive-english-train",
+      "endpoint": "Trusted request versus individually permitted mock proposal. Status and application-bound evidence references.",
+      "runtime_boundary": "Apple MLX GPU. Fresh processes warm each cohort, then measure pre-forward matching-scope trusted-input selection, prompt rendering and tokenization, and one finite three-logit forward/readback per row. Excludes model load, generated token streaming, post-model evidence citation attachment and rendering, dispatch and network. The recorded MLX peak is cumulative within the capture process.",
+      "native_wins": 43,
+      "native_losses": 20,
+      "native_ties": 169,
+      "arms": {
+        "qwen3-1.7b-matched-bf16-parent": {
+          "cases": 232,
+          "prompt_tokens": {
+            "min": 238,
+            "median": 246.0,
+            "max": 270
+          },
+          "native_joint": 135,
+          "native_confusion": {
+            "match": {
+              "match": 72,
+              "mismatch": 30,
+              "clarify": 6
+            },
+            "mismatch": {
+              "match": 28,
+              "mismatch": 58,
+              "clarify": 22
+            },
+            "clarify": {
+              "match": 10,
+              "mismatch": 1,
+              "clarify": 5
+            }
+          },
+          "calibrated_joint": 112,
+          "calibrated_confusion": {
+            "match": {
+              "match": 48,
+              "mismatch": 24,
+              "clarify": 36
+            },
+            "mismatch": {
+              "match": 5,
+              "mismatch": 51,
+              "clarify": 52
+            },
+            "clarify": {
+              "match": 2,
+              "mismatch": 1,
+              "clarify": 13
+            }
+          },
+          "runtime": {
+            "p50_ms": 36.641729064285755,
+            "p95_ms_linear": 37.62289647711441,
+            "peak_mlx_decimal_gb": 3.682683028
+          },
+          "original_capture": {
+            "path": "runs/redevelopment/sentry/intent-lora-1p7b-20261126T1630Z/parent-fewshot-development.jsonl",
+            "sha256": "4fd8b8a743b2760d739dfc7bc37f73bf5b9248f4cc24c76fac90982a5d336b5e",
+            "bytes": 35310
+          },
+          "original_summary": {
+            "path": "runs/redevelopment/sentry/intent-lora-1p7b-20261126T1630Z/parent-fewshot-development-aggregate.json",
+            "sha256": "0e245a5fd17b2140a6f95cecfb224e5dc09e26946a1f17bbfe9dc407d357a2f4",
+            "bytes": 8186
+          }
+        },
+        "sentry-qwen3-1.7b-rank4-step48-bf16-advisory": {
+          "cases": 232,
+          "prompt_tokens": {
+            "min": 238,
+            "median": 246.0,
+            "max": 270
+          },
+          "native_joint": 158,
+          "native_confusion": {
+            "match": {
+              "match": 57,
+              "mismatch": 51,
+              "clarify": 0
+            },
+            "mismatch": {
+              "match": 7,
+              "mismatch": 101,
+              "clarify": 0
+            },
+            "clarify": {
+              "match": 2,
+              "mismatch": 14,
+              "clarify": 0
+            }
+          },
+          "calibrated_joint": 101,
+          "calibrated_confusion": {
+            "match": {
+              "match": 38,
+              "mismatch": 24,
+              "clarify": 46
+            },
+            "mismatch": {
+              "match": 3,
+              "mismatch": 49,
+              "clarify": 56
+            },
+            "clarify": {
+              "match": 1,
+              "mismatch": 1,
+              "clarify": 14
+            }
+          },
+          "runtime": {
+            "p50_ms": 42.34168748371303,
+            "p95_ms_linear": 43.99997335858643,
+            "peak_mlx_decimal_gb": 4.001638648
+          },
+          "original_capture": {
+            "path": "runs/redevelopment/sentry/intent-lora-1p7b-20261126T1630Z/rank4-fewshot-development.jsonl",
+            "sha256": "41e65aab88e270855c937ab36e5dbc036c56c3362cac89cf2063ba551036dd0e",
+            "bytes": 35351
+          },
+          "original_summary": {
+            "path": "runs/redevelopment/sentry/intent-lora-1p7b-20261126T1630Z/rank4-fewshot-development-aggregate.json",
+            "sha256": "d19c2d3d4eea080e15a6670083009eba7ecd70eae12a643952ad69454c5a6e96",
+            "bytes": 8179
+          }
+        }
+      },
+      "calibration_rows": 64,
+      "calibration_family": "audio_level",
+      "developer_families": [
+        "alarm",
+        "media"
+      ],
+      "evidence": [
+        {
+          "path": "runs/redevelopment/sentry/intent-lora-1p7b-20261126T1630Z/rank4-fewshot-paired.json",
+          "sha256": "2c434a2002698a330bbd7e15c9bee25fc7e3befe80d9ba4f7689c453af924678",
+          "bytes": 6989
+        },
+        {
+          "path": "runs/redevelopment/sentry/intent-lora-1p7b-20261126T1630Z/fewshot-prompt-token-audit.json",
+          "sha256": "03c77d49901e227e99eaae084b863eb04d4aaba22bef722ac39b3c4760b75628",
+          "bytes": 58424
+        },
+        {
+          "path": "docs/redevelopment/sentry-intent-lora-results.json",
+          "sha256": "37755a2e7e864e85b8cd77c871705299fe190d5ca1c4f0451abd530dc6cc758c",
+          "bytes": 133865
+        },
+        {
+          "path": "sentry/trusted_intent_grouped_features.py",
+          "sha256": "c8d0447b3a77aeece7299401ee45a8f8a6b032fc66fe6137568ef7a80fc69904",
+          "bytes": 7525
+        }
+      ],
+      "portable_reference": "../evidence/replay-aggregates.json",
+      "replay_section": "sentry-source-lab-reconstruction",
+      "portable_staged_replay": {
+        "portable_path": "../evidence/replay-aggregates.json",
+        "sha256": "a2894e5d2a94e4790e89629f4a96ac12c2a9b9cd4753b802de7f474e5e4f7a1f",
+        "bytes": 8117
+      },
+      "staged_archive_replay_scope": "Portable wrapper resolver and renderer were replayed using archived three-way logits. The replay verifies exact messages and joint outputs without fresh model generation."
+    },
+    "sentry-rank4-factored-followup": {
+      "artifact": "sentry-qwen3-1.7b-rank4-step48-bf16-advisory",
+      "parent": "qwen3-1.7b-matched-bf16-parent",
+      "mode": "Fresh 112-row visible developer panel with a shared clarification detector. Application status, evidence and wrong-match counts are reported separately from native raw status.",
+      "denominator": 112,
+      "parent_joint": 60,
+      "candidate_joint": 73,
+      "pretrained_nli_joint": 80,
+      "purpose_specific_control_joint": 104,
+      "evidence": [
+        {
+          "path": "docs/redevelopment/sentry-intent-lora-results.json",
+          "sha256": "37755a2e7e864e85b8cd77c871705299fe190d5ca1c4f0451abd530dc6cc758c",
+          "bytes": 133865
+        },
+        {
+          "path": "docs/redevelopment/sentry-intent-lora.md",
+          "sha256": "5e732bb481693880693244a8d7109af15cdcb6be31d0639ef1daa8ba6b6a8c72",
+          "bytes": 10450
+        },
+        {
+          "path": "sentry/intent_factored.py",
+          "sha256": "285dea6eec16ab263867b183bb3afee87a5c2ccfdf9cd5fb685c8bcf46629226",
+          "bytes": 15103
+        }
+      ],
+      "replay_section": null
+    },
+    "historical-benchmark-expansion": {
+      "role": "historical_comparator_only",
+      "artifacts": [
+        "weightforge-qv64-int4-overlay",
+        "sentry-0.6b-v0.1-int4"
+      ],
+      "scope": "Research-only public small panels, simulator studies, randomized controls, historical precision and hardware engineering. These sources have distinct denominators and artifact IDs.",
+      "evidence": [
+        {
+          "path": "docs/benchmark-expansion/benchmark-matrix.csv",
+          "sha256": "22977f7631995f4a65c9b4f489d16fd106adf7fab5059fa82d164b5110900029",
+          "bytes": 2279
+        },
+        {
+          "path": "docs/benchmark-expansion/case-accounting.md",
+          "sha256": "17f0c90e99ec2883ca0f84f5f26eda0da007c3d69426174941ca533c02275533",
+          "bytes": 6599
+        },
+        {
+          "path": "docs/benchmark-expansion/publication-claims.csv",
+          "sha256": "1fe81052d7cde460898704592f35d691da2e8c00ddfadf3cc76c6c82c3939ae5",
+          "bytes": 14821
+        },
+        {
+          "path": "docs/benchmark-expansion/inference.md",
+          "sha256": "05224c2d2fcde5f73af4d4047cd70f0d901d4f6ad1d002d61e4a425af56a8083",
+          "bytes": 12337
+        },
+        {
+          "path": "docs/benchmark-expansion/weightforge-public-receipt.json",
+          "sha256": "8420b059648cbaa3e7b6bb32eac5dc230710b8693d408523b2260de8a52762a2",
+          "bytes": 35369
+        },
+        {
+          "path": "docs/benchmark-expansion/mbpp-receipt.json",
+          "sha256": "62c230c8634147d69dad45c65dccbd1e7f4efe4dab28499fbdbe51899517cc36",
+          "bytes": 28162
+        },
+        {
+          "path": "docs/benchmark-expansion/sentry.md",
+          "sha256": "82b7be6c5550a6c7fef341f13767bd18300b59a1c8c167e9d7572b6b169a30e4",
+          "bytes": 13438
+        }
+      ],
+      "replay_section": "archived-grading-in-the-source-lab"
+    }
+  },
+  "benchmark_archives": {
+    "agent-efficiency-bench-0.1.0": {
+      "archive": "AgentEfficiencyBench-0.1.0.zip",
+      "original_lab_artifact": {
+        "path": "benchmark-releases/AgentEfficiencyBench-0.1.0.zip",
+        "sha256": "36800222a99fa6f7e29ae361c2a61f6a50bd43b8a9f9cdeab187a05f79a9e4f4",
+        "bytes": 34146
+      },
+      "unpacked_directory": "AgentEfficiencyBench-0.1.0",
+      "cpu_replay": [
+        "python3 bench.py sample"
+      ],
+      "original_terms_path": "benchmark-releases/agent-efficiency-bench/README.md",
+      "original_role": "Historical benchmark package and archived measurements; outside this release tree.",
+      "local_release_candidate": {
+        "portable_path": "../benchmarks/AgentEfficiencyBench-0.1.0-local-rc1.zip",
+        "sha256": "353b8e9eb791a8ee11122c0a596880eebe663129620dc86e45b803bdf99da47e",
+        "bytes": 27814,
+        "unpacked_directory": "AgentEfficiencyBench-0.1.0-local-rc1",
+        "fixture_scope": "Small original authored fixtures for portable replay. Historical results have separate evidence receipts.",
+        "lab_code_license": "Apache-2.0",
+        "eligible_original_synthetic_fixtures_license": "CC-BY-4.0"
+      }
+    },
+    "weight-regression-bench-0.1.0": {
+      "archive": "WeightRegressionBench-0.1.0.zip",
+      "original_lab_artifact": {
+        "path": "benchmark-releases/WeightRegressionBench-0.1.0.zip",
+        "sha256": "78914847f6c484ac14eb57fce1bfecc5e11830335d029011efcaac8634ee3e65",
+        "bytes": 44999
+      },
+      "unpacked_directory": "WeightRegressionBench-0.1.0",
+      "cpu_replay": [
+        "python3 bench.py sample"
+      ],
+      "original_terms_path": "benchmark-releases/weight-regression-bench/README.md",
+      "original_role": "Historical benchmark package and archived measurements; outside this release tree.",
+      "local_release_candidate": {
+        "portable_path": "../benchmarks/WeightRegressionBench-0.1.0-local-rc1.zip",
+        "sha256": "9e9b871281433749b857c2a6a3cd58388b07d3aca65a3e05359001bf46e31425",
+        "bytes": 46332,
+        "unpacked_directory": "WeightRegressionBench-0.1.0-local-rc1",
+        "fixture_scope": "Small original authored fixtures for portable replay. Historical results have separate evidence receipts.",
+        "lab_code_license": "Apache-2.0",
+        "eligible_original_synthetic_fixtures_license": "CC-BY-4.0"
+      }
+    },
+    "mcp-enforce-bench-1.0.0": {
+      "archive": "MCP-EnforceBench-1.0.0.zip",
+      "original_lab_artifact": {
+        "path": "benchmark-releases/MCP-EnforceBench-1.0.0.zip",
+        "sha256": "212b74170c5986fbf713da0ae09076ca4c0b5145e88afbe88ddea413e7f51cdb",
+        "bytes": 12425
+      },
+      "unpacked_directory": "MCP-EnforceBench-1.0.0",
+      "cpu_replay": [
+        "python3 bench.py check --track scope",
+        "python3 bench.py check --track grounding"
+      ],
+      "original_terms_path": "benchmark-releases/mcp-enforcebench/README.md",
+      "original_role": "Historical benchmark package and archived measurements; outside this release tree.",
+      "local_release_candidate": {
+        "portable_path": "../benchmarks/MCP-EnforceBench-1.0.0-local-rc1.zip",
+        "sha256": "180f099d47e8fbacae847e1d29b8d68c38c0fb707f5cf376ae0286475f4142ab",
+        "bytes": 17061,
+        "unpacked_directory": "MCP-EnforceBench-1.0.0-local-rc1",
+        "fixture_scope": "Small original authored fixtures for portable replay. Historical results have separate evidence receipts.",
+        "lab_code_license": "Apache-2.0",
+        "eligible_original_synthetic_fixtures_license": "CC-BY-4.0"
+      }
+    },
+    "local-inference-bench-1.0.0": {
+      "archive": "LocalInferenceBench-1.0.0.zip",
+      "original_lab_artifact": {
+        "path": "benchmark-releases/LocalInferenceBench-1.0.0.zip",
+        "sha256": "a792fcc31fb144219166c46e291cd73072fd8dfd6157668e42940d6df7666f5f",
+        "bytes": 15515
+      },
+      "unpacked_directory": "LocalInferenceBench-1.0.0",
+      "cpu_replay": [
+        "python3 bench.py replay"
+      ],
+      "original_terms_path": "benchmark-releases/local-inferencebench/README.md",
+      "original_role": "Historical benchmark package and archived measurements; outside this release tree.",
+      "local_release_candidate": {
+        "portable_path": "../benchmarks/LocalInferenceBench-1.0.0-local-rc1.zip",
+        "sha256": "c0fdae93b63b99aec6655bc8d3387c362a6c569b08e5d1d3fbd81da2d5c1c95e",
+        "bytes": 20898,
+        "unpacked_directory": "LocalInferenceBench-1.0.0-local-rc1",
+        "fixture_scope": "Small original authored fixtures for portable replay. Historical results have separate evidence receipts.",
+        "lab_code_license": "Apache-2.0",
+        "eligible_original_synthetic_fixtures_license": "CC-BY-4.0"
+      }
+    }
+  },
+  "manifest_references": {
+    "archive_checksums": {
+      "portable_path": "../benchmarks/SHA256SUMS",
+      "sha256": "46719448b2db77df6ba1613435d3edaf7fbea893e52caef4911706308cd8cf80",
+      "bytes": 424
+    },
+    "benchmark_offline_audit": {
+      "portable_path": "../benchmarks/AUDIT.json",
+      "sha256": "172ef5aed951d1ce4016cc1bd3eb115637edb69aa6c6b7f2057823433eeca65e",
+      "bytes": 6743
+    },
+    "publication_terms": {
+      "portable_path": "../PUBLICATION-TERMS.md",
+      "sha256": "5c4685f0bd04e42ea98ec5463c90fa75e702e0c85426c51fe31cef8cb123c4a7",
+      "bytes": 1971
+    }
+  }
+}

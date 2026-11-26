@@ -1,0 +1,49 @@
+{
+  "adapter_code_sha256": "386b5c383deac1c5755187b6cdfffa4225e206feb832e02fa27df864359a18ad",
+  "arm_rows_verified": 2000,
+  "ast_correctness_and_error_codes_verified": 2000,
+  "categories": {
+    "multiple": {
+      "lost": 1,
+      "paired": 200,
+      "parent_correct": 185,
+      "rescued": 3,
+      "step12_correct": 187
+    },
+    "parallel": {
+      "lost": 0,
+      "paired": 200,
+      "parent_correct": 84,
+      "rescued": 40,
+      "step12_correct": 124
+    },
+    "parallel_multiple": {
+      "lost": 1,
+      "paired": 200,
+      "parent_correct": 87,
+      "rescued": 34,
+      "step12_correct": 120
+    },
+    "simple_python": {
+      "lost": 5,
+      "paired": 400,
+      "parent_correct": 343,
+      "rescued": 24,
+      "step12_correct": 362
+    }
+  },
+  "check": "CPU equivalence against archived native parser and pinned BFCL AST scoring",
+  "model_inference_calls": 0,
+  "native_calls_and_parser_errors_verified": 2000,
+  "network_denied": true,
+  "pins_sha256": "28c232c52a328971f5c306d8fd01c284babfcbf152a88e2211802bbd024daaa9",
+  "prompt_lengths_verified": 2000,
+  "runtime": {
+    "mlx": "0.32.2",
+    "mlx-lm": "0.31.3",
+    "transformers": "5.17.0"
+  },
+  "source_checkout_denied": true,
+  "source_files_verified": 18,
+  "token_redecodes_verified": 2000
+}
